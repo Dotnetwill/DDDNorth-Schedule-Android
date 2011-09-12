@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, DDDNorthScheduleActivity!</string>
+    <string name="app_name">DDDNorth Schedule</string>
+    <string name="schedule">[
+    {
+		\&quot;slot_display_name\&quot;: \&quot;9:30am - 10:30am\&quot;, 
+		\&quot;sessions\&quot; :  [
+			{
+				\&quot;id\&quot; : \&quot;1\&quot;,
+				\&quot;title\&quot; : \&quot;9.30 session 1\&quot;,
+				\&quot;speaker\&quot; : \&quot;Speaker 1\&quot;
+			},
+			{
+				\&quot;id\&quot; : \&quot;2\&quot;,
+				\&quot;title\&quot; : \&quot;9.30 session 2\&quot;,
+				\&quot;speaker\&quot; : \&quot;Speaker 2\&quot;
+			},
+			{
+				\&quot;id\&quot; : \&quot;3\&quot;,
+				\&quot;title\&quot; : \&quot;9.30 session 3\&quot;,
+				\&quot;speaker\&quot; : \&quot;Speaker 3\&quot;
+			}		
+		]
+	},
+	{
+		\&quot;slot_display_name\&quot;: \&quot;10:30am - 11:30am\&quot;,
+		\&quot;sessions\&quot; :  [
+			{
+				\&quot;id\&quot; : \&quot;4\&quot;,
+				\&quot;title\&quot; : \&quot;10.30 session 1\&quot;,
+				\&quot;speaker\&quot; : \&quot;Speaker 4\&quot;
+			},
+			{
+				\&quot;id\&quot; : \&quot;5\&quot;,
+				\&quot;title\&quot; : \&quot;10.30 session 2\&quot;,
+				\&quot;speaker\&quot; : \&quot;Speaker 5\&quot;
+			},
+			{
+				\&quot;id\&quot; : \&quot;6\&quot;,
+				\&quot;title\&quot; : \&quot;10.30 session 3\&quot;,
+				\&quot;speaker\&quot; : \&quot;Speaker 6\&quot;
+			}		
+		]
+	}	
+]</string>
+</resources>

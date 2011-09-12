@@ -1,0 +1,42 @@
+[
+    {
+		\"slot_display_name\": \"9:30am - 10:30am\", 
+		\"sessions\" :  [
+			{
+				\"id\" : \"1\",
+				\"title\" : \"9.30 session 1\",
+				\"speaker\" : \"Speaker 1\"
+			},
+			{
+				\"id\" : \"2\",
+				\"title\" : \"9.30 session 2\",
+				\"speaker\" : \"Speaker 2\"
+			},
+			{
+				\"id\" : \"3\",
+				\"title\" : \"9.30 session 3\",
+				\"speaker\" : \"Speaker 3\"
+			}		
+		]
+	},
+	{
+		\"slot_display_name\": \"10:30am - 11:30am\",
+		\"sessions\" :  [
+			{
+				\"id\" : \"4\",
+				\"title\" : \"10.30 session 1\",
+				\"speaker\" : \"Speaker 4\"
+			},
+			{
+				\"id\" : \"5\",
+				\"title\" : \"10.30 session 2\",
+				\"speaker\" : \"Speaker 5\"
+			},
+			{
+				\"id\" : \"6\",
+				\"title\" : \"10.30 session 3\",
+				\"speaker\" : \"Speaker 6\"
+			}		
+		]
+	}	
+]
