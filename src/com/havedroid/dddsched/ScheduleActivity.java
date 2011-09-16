@@ -3,55 +3,56 @@ package com.havedroid.dddsched;
 import com.havedroid.dddsched.data.Schedule;
 import com.havedroid.dddsched.data.SessionSlot;
 
-import android.app.Activity;
+import android.app.TabActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
 
-public class ScheduleActivity extends Activity implements TabHost.TabContentFactory {
+public class ScheduleActivity extends TabActivity  {
 	
 	private final String ALL_SCHEDULE_TAG = "overall";
 	private final String MY_SCHEDULE_TAG = "myschedule";
 	
-	private ListView mScheduleView;
 	private SectionedListAdapter mAllAdapter;
+	private SectionedListAdapter mMySessionsAdapter;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.scheduleview);
-        mScheduleView = (ListView)findViewById(R.id.ScheduleListView);
         setupTabs();
+        setupListAdapters();
+        
     }
 
-	private void setupTabs() {
-		TabHost tabs = (TabHost)findViewById(R.id.ScheduleTabHost);
-        TabHost.TabSpec tab;
-        tabs.setup();
+	private void setupListAdapters() {
+		ListView allScheduleList = (ListView)findViewById(R.id.AllScheduleListView);
+		allScheduleList.setAdapter(getAllSessionListAdapter());
+		
+		ListView myScheduleList = (ListView)findViewById(R.id.MyScheduleListView);
+		myScheduleList.setAdapter(getMySessionsAdapter());
+		
+	}
 
+	private void setupTabs() {
+		TabHost tabs = getTabHost();
+        TabHost.TabSpec tab;
+        
+        getLayoutInflater().inflate(
+                R.layout.scheduleview,
+                tabs.getTabContentView(),
+                true);
+        
         tab = tabs.newTabSpec(ALL_SCHEDULE_TAG);
 
-        tab.setContent(this);
+        tab.setContent(R.id.AllScheduleLayout);
         tab.setIndicator("All Sessions");
         tabs.addTab(tab);
         
         tab = tabs.newTabSpec(MY_SCHEDULE_TAG);
-        tab.setContent(this);
+        tab.setContent(R.id.MyScheduleLayout);
         tab.setIndicator("My Sessions");
         tabs.addTab(tab);
-	}
-
-	public View createTabContent(String tabTag) {
-		ListAdapter curAdapter = null;
-		if(tabTag == ALL_SCHEDULE_TAG){
-			curAdapter = getAllSessionListAdapter();
-		}
-		
-		mScheduleView.setAdapter(curAdapter);
-		
-		return mScheduleView;
 	}
 	
 	private ListAdapter getAllSessionListAdapter(){
@@ -64,5 +65,17 @@ public class ScheduleActivity extends Activity implements TabHost.TabContentFact
 			}
 		}
 		return mAllAdapter;
+	}
+	
+	private ListAdapter getMySessionsAdapter(){
+		if(mMySessionsAdapter == null){
+			mMySessionsAdapter = new SectionedListAdapter(this);
+			
+			for(SessionSlot slot : Schedule.getSchedule(this)){
+				AttendingSessionsListViewAdapter sessionAdapter = new AttendingSessionsListViewAdapter(this, slot.getSessions());
+				mMySessionsAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
+			}
+		}
+		return mMySessionsAdapter;
 	}
 }
