@@ -1,7 +1,9 @@
 package com.havedroid.dddsched.data;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.havedroid.dddsched.Constants;
 import com.havedroid.dddsched.R;
 
 import java.util.ArrayList;
@@ -20,8 +22,9 @@ public class Schedule {
 	private static final String JSON_SESSION_TITLE_NAME = "title";
 	private static final String JSON_SESSION_SPEAKER_NAME = "speaker";
 	private static final String JSON_SESSION_ID_NAME = "id";
-	private static final String JSON_SESSION_DESCRIPTION_NAME = "";
-
+	private static final String JSON_SESSION_DESCRIPTION_NAME = "description";
+	private static final String JSON_SESSION_START_TIME_NAME = "start_time";
+	private static final String JSON_SESSION_ROOM_NAME = "room";
 	
 	private static List<SessionSlot> mSchedule = null;
 	
@@ -48,6 +51,8 @@ public class Schedule {
 			}
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
+			Log.e(Constants.LOG_TAG, "Exception caught:" + e.getMessage());
+			
 			e.printStackTrace();
 		}
 	}
@@ -69,6 +74,9 @@ public class Schedule {
 			sessions[i].setId(jsonSession.getInt(JSON_SESSION_ID_NAME));
 			sessions[i].setTitle(jsonSession.getString(JSON_SESSION_TITLE_NAME));
 			sessions[i].setSpeaker(jsonSession.getString(JSON_SESSION_SPEAKER_NAME));
+			sessions[i].setRoom(jsonSession.getString(JSON_SESSION_ROOM_NAME));
+			sessions[i].setStartTime(jsonSession.getString(JSON_SESSION_START_TIME_NAME));
+			sessions[i].setDesc(jsonSession.getString(JSON_SESSION_DESCRIPTION_NAME));
 		}
 		
 		return sessions;

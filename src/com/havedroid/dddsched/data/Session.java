@@ -10,7 +10,7 @@ public class Session {
 	private String desc = "";
 	private String room = "";
 	private String speaker = "";
-	
+	private String startTime = "";
 	public int getId() {
 		return mId;
 	}
@@ -50,7 +50,20 @@ public class Session {
 	public void setSpeaker(String speaker) {
 		this.speaker = speaker;
 	}
-
+	
+	public String getStartTime() {
+		return startTime;
+	}
+	
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+	
+	public String getShortDescription(){
+		String noHTMLString = getDesc().replaceAll("\\<.*?\\>", "");
+		return "";
+	}
+	
 	public Boolean getAttending(Context context) {
 		SharedPreferences preferences = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
 		String attendingSessions = preferences.getString("sessionsAttending", "");
@@ -78,4 +91,6 @@ public class Session {
 		editor.putString("sessionsAttending", attendingSessions);
 		editor.commit();
 	}
+
+	
 }

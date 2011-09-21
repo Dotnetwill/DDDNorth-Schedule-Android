@@ -5,17 +5,26 @@
 			{
 				\"id\" : \"1\",
 				\"title\" : \"9.30 session 1\",
-				\"speaker\" : \"Speaker 1\"
+				\"speaker\" : \"Speaker 1\",
+				\"start_time\": \"09.30\",
+				\"room\": \"1\",
+				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			},
 			{
 				\"id\" : \"2\",
 				\"title\" : \"9.30 session 2\",
-				\"speaker\" : \"Speaker 2\"
+				\"speaker\" : \"Speaker 2\",
+				\"start_time\": \"09.30\",
+				\"room\": \"1\",
+				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			},
 			{
 				\"id\" : \"3\",
 				\"title\" : \"9.30 session 3\",
-				\"speaker\" : \"Speaker 3\"
+				\"speaker\" : \"Speaker 3\",
+				\"start_time\": \"09.30\",
+				\"room\": \"1\",
+				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			}		
 		]
 	},
@@ -25,18 +34,27 @@
 			{
 				\"id\" : \"4\",
 				\"title\" : \"10.30 session 1\",
-				\"speaker\" : \"Speaker 4\"
+				\"speaker\" : \"Speaker 4\",
+				\"start_time\": \"10.30\",
+				\"room\": \"1\",
+				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			},
 			{
 				\"id\" : \"5\",
 				\"title\" : \"10.30 session 2\",
-				\"speaker\" : \"Speaker 5\"
+				\"speaker\" : \"Speaker 5\",
+				\"start_time\": \"10.30\",
+				\"room\": \"1\",
+				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			},
 			{
 				\"id\" : \"6\",
 				\"title\" : \"10.30 session 3\",
-				\"speaker\" : \"Speaker 6\"
+				\"speaker\" : \"Speaker 6\",
+				\"start_time\": \"10.30\",
+				\"room\": \"1\",
+				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			}		
 		]
-	}	
+	},
 ]
