@@ -62,7 +62,7 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 		viewHolder.Attend.setTag(mSessions[index]);
 		
 		viewHolder.Title.setText(curSession.getTitle());
-		viewHolder.ClippDesc.setText(curSession.getDesc());
+		viewHolder.ClippDesc.setText(curSession.getShortDescription());
 		viewHolder.Room.setText(curSession.getRoom());
 		viewHolder.Speaker.setText(curSession.getSpeaker());
 		

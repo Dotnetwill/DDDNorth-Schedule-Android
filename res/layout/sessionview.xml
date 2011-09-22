@@ -6,25 +6,47 @@
 	<TextView android:id="@+id/Detail_SessionTitle" 
 		      android:layout_width="fill_parent"
 		      android:text="My giddy God it's Harry Potter!!"
-		      android:layout_height="wrap_content" />
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" />
+		      
 	<TextView android:id="@+id/Detail_ClippedSessionDesc" 
 			  android:text="This test text should be a little longer just so we can how a really long session description will look.  Although it might be better to have a seperate detail page"
 		      android:layout_width="fill_parent"
 		      android:layout_height="wrap_content"
+		      android:padding="3dip"
+		      android:textStyle="italic"
 		      android:layout_below="@id/Detail_SessionTitle" />
+		      
+	<TextView android:id="@+id/Session_Speaker_label"
+			  android:text="By"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_below="@+id/Detail_ClippedSessionDesc"
+		      android:paddingRight="5dip" 
+		      />
 	
 	<TextView android:id="@+id/Detail_SessionSpeaker" 
 			  android:text="General Awesome"
-		      android:layout_width="fill_parent"
+		      android:layout_width="wrap_content"
 		      android:layout_height="wrap_content"
-		      android:layout_below="@+id/Detail_ClippedSessionDesc" />
-		      
+		      android:layout_below="@+id/Detail_ClippedSessionDesc"
+		      android:layout_toRightOf="@id/Session_Speaker_label" />
+
+	<TextView android:id="@+id/Session_Room_label"
+			  android:text="In"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_below="@id/Detail_SessionSpeaker"
+		      android:paddingRight="5dip" />
+		      	
 	<TextView android:id="@+id/Detail_SessionRoom" 
 			  android:text="Room 101"
 		      android:layout_width="wrap_content"
 		      android:layout_height="wrap_content"
-		      android:layout_below="@id/Detail_SessionSpeaker" />
-		      
+		      android:layout_below="@id/Detail_SessionSpeaker" 
+		      android:layout_toRightOf="@id/Session_Room_label"/>
+	
+			  	      
 	<CheckBox android:layout_height="wrap_content" 
 			  android:layout_width="wrap_content" 
 			  android:id="@+id/Detail_Attend" 

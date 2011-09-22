@@ -56,5 +56,5 @@
 				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			}		
 		]
-	},
+	}
 ]

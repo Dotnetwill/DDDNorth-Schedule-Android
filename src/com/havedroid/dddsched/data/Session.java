@@ -1,10 +1,17 @@
 package com.havedroid.dddsched.data;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.text.Html;
 
 public class Session {
+	private static final int SHORT_DESC_LENGHT = 100;
 	private int mId;
 	private String title = "";
 	private String desc = "";
@@ -28,7 +35,7 @@ public class Session {
 	}
 
 	public String getDesc() {
-		return desc;
+		return Html.fromHtml(desc).toString();
 	}
 
 	public void setDesc(String desc) {
@@ -51,8 +58,15 @@ public class Session {
 		this.speaker = speaker;
 	}
 	
-	public String getStartTime() {
-		return startTime;
+	public Date getStartTime() {
+		try {
+			DateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+			return sdf.parse(startTime);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return new Date();
+		}
 	}
 	
 	public void setStartTime(String startTime) {
@@ -61,7 +75,12 @@ public class Session {
 	
 	public String getShortDescription(){
 		String noHTMLString = getDesc().replaceAll("\\<.*?\\>", "");
-		return "";
+		
+		if(noHTMLString.length() > SHORT_DESC_LENGHT){
+			return noHTMLString.substring(0, SHORT_DESC_LENGHT) + "...";
+		}
+		
+		return noHTMLString;
 	}
 	
 	public Boolean getAttending(Context context) {
