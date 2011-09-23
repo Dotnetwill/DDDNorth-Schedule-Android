@@ -10,17 +10,19 @@ import com.havedroid.dddsched.Constants;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.text.Html;
 import android.util.Log;
 
-public class Session {
+public class Session implements Parcelable {
 	private static final int SHORT_DESC_LENGHT = 100;
 	private int mId;
-	private String title = "";
-	private String desc = "";
-	private String room = "";
-	private String speaker = "";
-	private String startTime = "";
+	private String mTitle = "";
+	private String mDesc = "";
+	private String mRoom = "";
+	private String mSpeaker = "";
+	private String mStartTime = "";
 	public int getId() {
 		return mId;
 	}
@@ -30,41 +32,41 @@ public class Session {
 	}
 
 	public String getTitle() {
-		return title;
+		return mTitle;
 	}
 
 	public void setTitle(String title) {
-		this.title = title;
+		this.mTitle = title;
 	}
 
 	public String getDesc() {
-		return Html.fromHtml(desc).toString();
+		return Html.fromHtml(mDesc).toString();
 	}
 
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.mDesc = desc;
 	}
 
 	public String getRoom() {
-		return room;
+		return mRoom;
 	}
 
 	public void setRoom(String room) {
-		this.room = room;
+		this.mRoom = room;
 	}
 
 	public String getSpeaker() {
-		return speaker;
+		return mSpeaker;
 	}
 
 	public void setSpeaker(String speaker) {
-		this.speaker = speaker;
+		this.mSpeaker = speaker;
 	}
 	
 	public Date getStartTime() {
 		try {
 			DateFormat sdf = new SimpleDateFormat("hh:mm:ss");
-			return sdf.parse(startTime);
+			return sdf.parse(mStartTime);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -73,7 +75,7 @@ public class Session {
 	}
 	
 	public void setStartTime(String startTime) {
-		this.startTime = startTime;
+		this.mStartTime = startTime;
 	}
 	
 	public String getShortDescription(){
@@ -122,5 +124,40 @@ public class Session {
 		editor.commit();
 	}
 
-	
+	 public void writeToParcel(Parcel out, int flags) {
+         out.writeInt(mId);
+         out.writeString(mDesc);
+         out.writeString(mRoom);
+         out.writeString(mSpeaker);
+         out.writeString(mStartTime);
+         out.writeString(mTitle);
+     }
+
+     public static final Parcelable.Creator<Session> CREATOR
+             = new Parcelable.Creator<Session>() {
+         public Session createFromParcel(Parcel in) {
+             return new Session(in);
+         }
+
+         public Session[] newArray(int size) {
+             return new Session[size];
+         }
+     };
+     
+     private Session(Parcel in) {
+    	 mId = in.readInt();
+    	 mDesc = in.readString();
+    	 mRoom = in.readString();
+    	 mSpeaker = in.readString();
+    	 mStartTime = in.readString();
+    	 mTitle = in.readString();
+     }
+
+	public Session() {
+	}
+
+	public int describeContents() {
+		
+		return 0;
+	}
 }

@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView android:layout_width="fill_parent"
+		      android:text="Title"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" 
+		      style="@style/ddd_header"/>
+	<TextView android:id="@+id/FullDetail_SessionTitle" 
+		      android:layout_width="fill_parent"
+		      android:text="My giddy God it's Harry Potter!!"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" />
+		      
+	<TextView android:layout_width="fill_parent"
+		      android:text="Description"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold"
+		      style="@style/ddd_header" />
+	<TextView android:id="@+id/FullDetail_SessionDescription" 
+		      android:layout_width="fill_parent"
+		      android:text="My giddy God it's Harry Potter!!"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" />
+		      
+
+	<TextView android:layout_width="fill_parent"
+		      android:text="Presenter"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" 
+		      style="@style/ddd_header"/>
+	<TextView android:id="@+id/FullDetail_SessionPres" 
+		      android:layout_width="fill_parent"
+		      android:text="My giddy God it's Harry Potter!!"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" />
+		      
+	<TextView android:layout_width="fill_parent"
+		      android:text="Room"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold"
+		      style="@style/ddd_header" />
+	<TextView android:id="@+id/FullDetail_SessionRoom" 
+		      android:layout_width="fill_parent"
+		      android:text="My giddy God it's Harry Potter!!"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" />
+
+	<TextView android:layout_width="fill_parent"
+		      android:text="Start Time"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold"
+		      style="@style/ddd_header" />
+	<TextView android:id="@+id/FullDetail_SessionTime" 
+		      android:layout_width="fill_parent"
+		      android:text="My giddy God it's Harry Potter!!"
+		      android:padding="2dip"
+		      android:layout_height="wrap_content"
+		      android:textStyle="bold" />
+		      
+		    
+		      
+
+</LinearLayout>

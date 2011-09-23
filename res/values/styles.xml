@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="ddd_header">
+		<item name="android:paddingTop">2dip</item>
+    	<item name="android:paddingBottom">2dip</item>
+    	<item name="android:paddingLeft">5dip</item>
+    	<item name="android:textColor">#ffffff</item>
+    	<item name="android:background">#652d90</item>
+	</style>
+</resources>

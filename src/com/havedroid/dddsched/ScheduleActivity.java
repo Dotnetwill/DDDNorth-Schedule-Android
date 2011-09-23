@@ -93,7 +93,7 @@ public class ScheduleActivity extends TabActivity  {
 		if(mMySessionsAdapter == null){
 			mMySessionsAdapter = new SectionedListAdapter(this);
 			for(SessionSlot slot : Schedule.getSchedule(this)){
-				AttendingSessionsListViewAdapter sessionAdapter = new AttendingSessionsListViewAdapter(this, slot.getSessions().clone());
+				AttendingSessionsListViewAdapter sessionAdapter = new AttendingSessionsListViewAdapter(this, slot.getSessions());
 				mMySessionsAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
 			}
 		}

@@ -14,5 +14,6 @@
             </intent-filter>
         </activity>
 		<activity android:name=".ScheduleActivity" />
+		<activity android:name=".SessionViewActivity" />
     </application>
 </manifest>

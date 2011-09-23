@@ -3,6 +3,7 @@ package com.havedroid.dddsched;
 import com.havedroid.dddsched.data.Session;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,12 +45,15 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 			
 			viewHolder = new ViewHolder();
 			viewHolder.Title = (TextView)view.findViewById(R.id.Detail_SessionTitle);
-			viewHolder.ClippDesc = (TextView)view.findViewById(R.id.Detail_ClippedSessionDesc);
+			
 			viewHolder.Room = (TextView)view.findViewById(R.id.Detail_SessionRoom);
 			viewHolder.Speaker = (TextView)view.findViewById(R.id.Detail_SessionSpeaker);
 			
 			viewHolder.Attend = (CheckBox)view.findViewById(R.id.Detail_Attend);
 			viewHolder.Attend.setOnClickListener(attendClick);
+			
+			viewHolder.ClippDesc = (TextView)view.findViewById(R.id.Detail_ClippedSessionDesc);
+			viewHolder.ClippDesc.setOnClickListener(descClick);
 			
 			view.setTag(viewHolder);
 		}else{
@@ -62,6 +66,7 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 		
 		viewHolder.Title.setText(curSession.getTitle());
 		viewHolder.ClippDesc.setText(curSession.getShortDescription());
+		viewHolder.ClippDesc.setTag(curSession);
 		viewHolder.Room.setText(curSession.getRoom());
 		viewHolder.Speaker.setText(curSession.getSpeaker());
 		
@@ -81,6 +86,14 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 			Session session = (Session)v.getTag();
 			session.setAttending(mContext, !session.getAttending(mContext));
 			notifyDataSetChanged();
+		}
+	};
+	
+	private View.OnClickListener descClick = new View.OnClickListener() {
+		public void onClick(View v){
+			Intent showDetailIntent = new Intent(mContext, SessionViewActivity.class);
+			showDetailIntent.putExtra(SessionViewActivity.SESSION_EXTRA_KEY, (Session)v.getTag());
+			mContext.startActivity(showDetailIntent);
 		}
 	};
 }
