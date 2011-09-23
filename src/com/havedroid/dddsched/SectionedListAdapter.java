@@ -4,16 +4,19 @@ import java.util.LinkedHashMap;
 import java.util.Map;
  
 import android.content.Context;
+import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
  
     public class SectionedListAdapter extends BaseAdapter {
  
         public final Map<String, Adapter> sections = new LinkedHashMap<String, Adapter>();
         public final ArrayAdapter<String> headers;
+		private ListAdapter mFilteredList;
         public final static int TYPE_SECTION_HEADER = 0;
  
         public SectionedListAdapter(Context context) {
@@ -22,9 +25,17 @@ import android.widget.BaseAdapter;
  
         public void addSection(String section, Adapter adapter) {
             this.headers.add(section);
+            adapter.registerDataSetObserver(new CascadeDataSetObserver());
             this.sections.put(section, adapter);
         }
  
+        public void notifyAllDatasetChanges(){
+        	for(Adapter adapter : sections.values()){
+        		((BaseAdapter)adapter).notifyDataSetChanged();
+        	}
+        	this.notifyDataSetChanged();
+        }
+        
         public Object getItem(int position) {
             for (Object section : this.sections.keySet()) {
                 Adapter adapter = sections.get(section);
@@ -108,4 +119,22 @@ import android.widget.BaseAdapter;
             return position;
         }
  
+    	private class CascadeDataSetObserver extends DataSetObserver {
+    		@Override
+    		public void onChanged() {
+    			notifyDataSetChanged();
+    			if(mFilteredList != null){
+    				((BaseAdapter)mFilteredList).notifyDataSetChanged();
+    			}
+    		}
+
+    		@Override
+    		public void onInvalidated() {
+    			notifyDataSetInvalidated();
+    		}
+    	}
+
+		public void setFilteredList(ListAdapter filteredList) {
+			mFilteredList = filteredList;
+		}
     }

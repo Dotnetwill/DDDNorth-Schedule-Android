@@ -5,10 +5,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.havedroid.dddsched.Constants;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.text.Html;
+import android.util.Log;
 
 public class Session {
 	private static final int SHORT_DESC_LENGHT = 100;
@@ -86,9 +89,14 @@ public class Session {
 	public Boolean getAttending(Context context) {
 		SharedPreferences preferences = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
 		String attendingSessions = preferences.getString("sessionsAttending", "");
+		Log.d(Constants.LOG_TAG, "Attending sessions string: " + attendingSessions);
+		
+		String idString =String.valueOf(mId);
+		Log.d(Constants.LOG_TAG, "session id string: " + idString);
 		
 		for(String id : attendingSessions.split(",")){
-			if(String.valueOf(mId).equals(id)){
+			if(idString.equals(id)){
+				
 				return true;
 			}
 		}

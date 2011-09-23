@@ -36,6 +36,7 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 
 	public View getView(int index, View view, ViewGroup viewGroup) {
 		ViewHolder viewHolder;
+		
 		if(view == null)
 		{
 			LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -49,17 +50,15 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 			
 			viewHolder.Attend = (CheckBox)view.findViewById(R.id.Detail_Attend);
 			viewHolder.Attend.setOnClickListener(attendClick);
-			viewHolder.Attend.setTag(mSessions[index]);
 			
 			view.setTag(viewHolder);
 		}else{
 			viewHolder = (ViewHolder)view.getTag();
 		}
 		
-		Session curSession = mSessions[index];
-		
+		Session curSession = (Session)getItem(index);
 		viewHolder.Attend.setChecked(curSession.getAttending(mContext));
-		viewHolder.Attend.setTag(mSessions[index]);
+		viewHolder.Attend.setTag(curSession);
 		
 		viewHolder.Title.setText(curSession.getTitle());
 		viewHolder.ClippDesc.setText(curSession.getShortDescription());
@@ -81,6 +80,7 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 		public void onClick(View v){
 			Session session = (Session)v.getTag();
 			session.setAttending(mContext, !session.getAttending(mContext));
+			notifyDataSetChanged();
 		}
 	};
 }
