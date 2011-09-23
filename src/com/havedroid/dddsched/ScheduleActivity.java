@@ -22,13 +22,13 @@ public class ScheduleActivity extends TabActivity  {
         super.onCreate(savedInstanceState);
         setupTabs();
         setupListAdapters();
-        
+         
     }
 
 	private void setupListAdapters() {
 		ListView allScheduleList = (ListView)findViewById(R.id.AllScheduleListView);
 		allScheduleList.setAdapter(getAllSessionListAdapter());
-		
+	
 		ListView myScheduleList = (ListView)findViewById(R.id.MyScheduleListView);
 		myScheduleList.setAdapter(getMySessionsAdapter());
 		
@@ -37,14 +37,14 @@ public class ScheduleActivity extends TabActivity  {
 	private void setupTabs() {
 		TabHost tabs = getTabHost();
         TabHost.TabSpec tab;
-        
+        tabs.setOnTabChangedListener(mTabChangeListener);
         getLayoutInflater().inflate(
                 R.layout.scheduleview,
                 tabs.getTabContentView(),
                 true);
         
         tab = tabs.newTabSpec(ALL_SCHEDULE_TAG);
-
+       
         tab.setContent(R.id.AllScheduleLayout);
         tab.setIndicator("All Sessions");
         tabs.addTab(tab);
@@ -54,6 +54,19 @@ public class ScheduleActivity extends TabActivity  {
         tab.setIndicator("My Sessions");
         tabs.addTab(tab);
 	}
+	
+	private TabHost.OnTabChangeListener mTabChangeListener = new TabHost.OnTabChangeListener() {
+		
+		public void onTabChanged(String tabId) {
+			//Total hack but update the lists as we move between tabs in case something has changed
+			if(mAllAdapter != null){
+				mAllAdapter.notifyDataSetChanged();
+			}
+			if(mMySessionsAdapter != null){
+				mMySessionsAdapter.notifyDataSetChanged();
+			}
+		}
+	};
 	
 	private ListAdapter getAllSessionListAdapter(){
 		if(mAllAdapter == null){

@@ -104,8 +104,11 @@ public class Session {
 		SharedPreferences preferences = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
 		String attendingSessions = preferences.getString("sessionsAttending", "");
 		
-		attendingSessions += "," + String.valueOf(mId);
-		
+		if(attending){
+			attendingSessions += "," + String.valueOf(mId);
+		}else{
+			attendingSessions = attendingSessions.replace("," + String.valueOf(mId), "");
+		}
 		Editor editor = preferences.edit();
 		editor.putString("sessionsAttending", attendingSessions);
 		editor.commit();
