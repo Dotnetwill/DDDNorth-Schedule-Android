@@ -10,7 +10,7 @@
 				  android:layout_height="wrap_content"
 				  android:layout_marginBottom="15dp">
     			     
-		<TextView android:text="DDD North Schedule"
+		<TextView android:text="DDD North Sessions"
 				  android:layout_width="fill_parent" 
 				  android:layout_height="fill_parent" 
 				  android:background="#652d90"
