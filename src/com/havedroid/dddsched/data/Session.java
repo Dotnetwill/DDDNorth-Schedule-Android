@@ -45,7 +45,7 @@ public class Session implements Parcelable {
 	}
 
 	public String getTitle() {
-		return mTitle;
+		return Html.fromHtml(mTitle).toString();
 	}
 
 	public void setTitle(String title) {
