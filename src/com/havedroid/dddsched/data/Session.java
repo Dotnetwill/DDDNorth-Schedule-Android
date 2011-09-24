@@ -23,6 +23,19 @@ public class Session implements Parcelable {
 	private String mRoom = "";
 	private String mSpeaker = "";
 	private String mStartTime = "";
+	
+	public Session() {
+	}
+	
+	private Session(Parcel in) {
+   	 mId = in.readInt();
+   	 mDesc = in.readString();
+   	 mRoom = in.readString();
+   	 mSpeaker = in.readString();
+   	 mStartTime = in.readString();
+   	 mTitle = in.readString();
+	}
+	
 	public int getId() {
 		return mId;
 	}
@@ -65,7 +78,7 @@ public class Session implements Parcelable {
 	
 	public Date getStartTime() {
 		try {
-			DateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+			DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
 			return sdf.parse(mStartTime);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -144,17 +157,7 @@ public class Session implements Parcelable {
          }
      };
      
-     private Session(Parcel in) {
-    	 mId = in.readInt();
-    	 mDesc = in.readString();
-    	 mRoom = in.readString();
-    	 mSpeaker = in.readString();
-    	 mStartTime = in.readString();
-    	 mTitle = in.readString();
-     }
 
-	public Session() {
-	}
 
 	public int describeContents() {
 		
