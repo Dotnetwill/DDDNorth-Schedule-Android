@@ -4,56 +4,109 @@
 		\"sessions\" :  [
 			{
 				\"id\" : \"1\",
-				\"title\" : \"9.30 session 1\",
-				\"speaker\" : \"Speaker 1\",
-				\"start_time\": \"09.30\",
-				\"room\": \"1\",
+				\"title\" : \"Node.js - let's look at it\",
+				\"speaker\" : \"Rob Ashton\",
+				\"start_time\": \"08/10/2011 09:30\",
+				\"room\": \"107\",
 				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
 			},
 			{
 				\"id\" : \"2\",
-				\"title\" : \"9.30 session 2\",
-				\"speaker\" : \"Speaker 2\",
-				\"start_time\": \"09.30\",
-				\"room\": \"1\",
-				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
+				\"title\" : \"Behaviour Driven Development\",
+				\"speaker\" : \"Ian Cooper\",
+				\"start_time\": \"08/10/2011 09:30\",
+				\"room\": \"108\",
+				\"description\": \"&lt;p&gt;&lt;span style=&quot;font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; &quot;&gt;&lt;span&gt;Behavior Driven Development (or BDD) is an Agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. It was originally named in 2003 by Dan North as a response to Test Driven Development (TDD), and to Framework for Integrated Tests concepts, from the Customer Test practice in Extreme Programming. It has evolved over the last few years from a better way of doing TDD, through the inclusion of acceptance-test driven development (ATDD) to a full stack agile methodology. In this presentation we will explain how to do BDD and why its not about tools such as Specflow or Cucumber, but about approach. However, we&#39;ll give you a taste of those tools, once we have explained why you might need them.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\"
 			},
 			{
 				\"id\" : \"3\",
-				\"title\" : \"9.30 session 3\",
-				\"speaker\" : \"Speaker 3\",
-				\"start_time\": \"09.30\",
-				\"room\": \"1\",
-				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
+				\"title\" : \"Reactive Extensions for .NET for the Rest of Us\",
+				\"speaker\" : \"Mike Taulty\",
+				\"start_time\": \"08/10/2011 09:30\",
+				\"room\": \"109\",
+				\"description\": \"&lt;p&gt;The Reactive Extensions for .NET library from Microsoft’s DevLabs provides an intriguing insight into how .NET in the future might deal with asynchronous or event-based programming. But, if you’ve taken a glance at Rx, it can sometimes feel as though Rx was invented by rocket scientists for rocket scientists. In this session, a non-rocket-scientist will walk through the basics of Rx from scratch, talking about what problem the framework is trying to solve, the simple interfaces that underpin its workings and looking at simple, common examples of where Rx might help in your development today and tomorrow.&lt;/p&gt;\"
+			},
+			{
+				\"id\" : \"4\",
+				\"title\" : \"refORM - Death to ORMs in .NET\",
+				\"speaker\" : \"James Hughes\",
+				\"start_time\": \"08/10/2011 09:30\",
+				\"room\": \"110\",
+				\"description\": \"&lt;p&gt;Data Access is a difficult area to master.&amp;nbsp; There are plenty of frameworks such as Entity Framework, NHibernate, i/myBatis.&amp;nbsp; There frameworks attempt to make data access simpler but while these products are widely used they lead to leaky abstractions forcing us to work around constraints of the technology or introduce the nightmare of trying to figure out what is happening deep down in the frameworks internals.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In this session we will look at the various lightweight alternatives and the advantages they offer as well as provide rationale about why the more heavyweight approach is seldom the best approach.&lt;/div&gt;&lt;/p&gt;\"
 			}		
 		]
 	},
 	{
-		\"slot_display_name\": \"10:30am - 11:30am\",
+		\"slot_display_name\": \"10:45am - 11:45am\",
 		\"sessions\" :  [
 			{
-				\"id\" : \"4\",
-				\"title\" : \"10.30 session 1\",
-				\"speaker\" : \"Speaker 4\",
-				\"start_time\": \"10.30\",
-				\"room\": \"1\",
-				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
-			},
-			{
 				\"id\" : \"5\",
-				\"title\" : \"10.30 session 2\",
-				\"speaker\" : \"Speaker 5\",
-				\"start_time\": \"10.30\",
-				\"room\": \"1\",
-				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
+				\"title\" : \"Tips and Tricks : Lightning fast pages\",
+				\"speaker\" : \"Phil Winstanley\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"107\",
+				\"description": \"&lt;p&gt;&lt;BODY&gt;Speed matters, to your users, to your boss, but most importantly, to you, especially when you&#39;re working on a site a lot, the faster you can get pages to render the more you can get done.&lt;BR&gt;&lt;BR&gt;In this session we&#39;ll fly through dozens of tips and tricks for speeding up you Web page load times.&lt;BR&gt;&lt;BR&gt;We&#39;ll discuss Browser differences, HTML, Javascript, Network strategies as well as other methods of making your pages load as quickly as possible.&lt;BR&gt;&lt;BR&gt;This will be a beggining/intermediate level session, but if you&#39;re a hardcore developer than maybe you&#39;ll pick up some things you don&#39;t know already too!&lt;BR&gt;&lt;/BODY&gt;&lt;/p&gt;\"
 			},
 			{
 				\"id\" : \"6\",
-				\"title\" : \"10.30 session 3\",
-				\"speaker\" : \"Speaker 6\",
-				\"start_time\": \"10.30\",
-				\"room\": \"1\",
-				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
+				\"title\" : \"Commercial Software Development - Writing Software Is Easy, Not Going Bust Is The Hard Bi",
+				\"speaker\" : \"Liam Westley\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"108\",
+				\"description\": \"&lt;p&gt;There are three excellent ways to lose lots of money; open a restaurant, own a football club or start a software development company.&lt;br&gt;&lt;br&gt; Liam will provide a personal and subjective view on some of the tactics that he has found useful when running a software development company, to ensure it enjoys a 1st birthday party.&lt;br&gt;&lt;br&gt; Liam will be assuming that you can write code, work hard, have commercial &lt;br&gt;ideas and have clients or sales leads.&lt;br&gt;&lt;br&gt; We won’t focus on any particular technology or framework, instead topics will include; Support, Testing, Logging, Time/Cost Estimates, Paperwork and Sales Pitches.&lt;/p&gt;\"
+			},
+			{
+				\"id\" : \"7\",
+				\"title\" : \"Re-Build: A One Hour developer’s view of Windows 8\",
+				\"speaker\" : \"Robert Hogg\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"109\",
+				\"description\": \"&lt;p&gt;At Build in September, Microsoft will announce Windows 8.&lt;br /&gt;Windows 8 is expected to have features such as support for System on A chip, Touch First Interface and HTML 5 applications – all available through an app store.  It is expected that Microsoft will deliver Windows 8 next year but why wait that long to get ready? Join us for a comprehensive overview of what’s new, what’s bad and how to get connected to Windows 8.&lt;br /&gt;This session will be cover&lt;br /&gt;- Windows 8 Overview &lt;br /&gt;- Developing for Windows 8&lt;br /&gt;- Developer Tooling changes&lt;br /&gt;- Delivering Windows 8 applications&lt;br /&gt;Robert will be joined in this session by Steve Spencer, Development Director of Black Marble.&lt;/p&gt;\"
+			},
+			{
+				\"id\" : \"8\",
+				\"title\" : \"Introduction to Android from a .NET-er\",
+				\"speaker\" : \"Will Charles\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"110\",
+				\"description\": \"&lt;span&gt;During this session we will attempt to write a native Android app (Yes that means Java) to view photos from Facebook and set them as the background image on the device.&lt;span&gt;&amp;nbsp; &lt;/span&gt;Along the way we will see the basics of intents, activities and layouts.&lt;span&gt;&amp;nbsp; &lt;/span&gt;As well as showing the strange little bits of Java that threw this poor .NET developer!&lt;/span&gt;\"
+			}		
+		]
+	},
+	{
+		\"slot_display_name\": \"10:45am - 11:45am\",
+		\"sessions\" :  [
+			{
+				\"id\" : \"5\",
+				\"title\" : \"Tips and Tricks : Lightning fast pages\",
+				\"speaker\" : \"Phil Winstanley\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"107\",
+				\"description": \"&lt;p&gt;&lt;BODY&gt;Speed matters, to your users, to your boss, but most importantly, to you, especially when you&#39;re working on a site a lot, the faster you can get pages to render the more you can get done.&lt;BR&gt;&lt;BR&gt;In this session we&#39;ll fly through dozens of tips and tricks for speeding up you Web page load times.&lt;BR&gt;&lt;BR&gt;We&#39;ll discuss Browser differences, HTML, Javascript, Network strategies as well as other methods of making your pages load as quickly as possible.&lt;BR&gt;&lt;BR&gt;This will be a beggining/intermediate level session, but if you&#39;re a hardcore developer than maybe you&#39;ll pick up some things you don&#39;t know already too!&lt;BR&gt;&lt;/BODY&gt;&lt;/p&gt;\"
+			},
+			{
+				\"id\" : \"6\",
+				\"title\" : \"Commercial Software Development - Writing Software Is Easy, Not Going Bust Is The Hard Bi",
+				\"speaker\" : \"Liam Westley\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"108\",
+				\"description\": \"&lt;p&gt;There are three excellent ways to lose lots of money; open a restaurant, own a football club or start a software development company.&lt;br&gt;&lt;br&gt; Liam will provide a personal and subjective view on some of the tactics that he has found useful when running a software development company, to ensure it enjoys a 1st birthday party.&lt;br&gt;&lt;br&gt; Liam will be assuming that you can write code, work hard, have commercial &lt;br&gt;ideas and have clients or sales leads.&lt;br&gt;&lt;br&gt; We won’t focus on any particular technology or framework, instead topics will include; Support, Testing, Logging, Time/Cost Estimates, Paperwork and Sales Pitches.&lt;/p&gt;\"
+			},
+			{
+				\"id\" : \"7\",
+				\"title\" : \"Re-Build: A One Hour developer’s view of Windows 8\",
+				\"speaker\" : \"Robert Hogg\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"109\",
+				\"description\": \"&lt;p&gt;At Build in September, Microsoft will announce Windows 8.&lt;br /&gt;Windows 8 is expected to have features such as support for System on A chip, Touch First Interface and HTML 5 applications – all available through an app store.  It is expected that Microsoft will deliver Windows 8 next year but why wait that long to get ready? Join us for a comprehensive overview of what’s new, what’s bad and how to get connected to Windows 8.&lt;br /&gt;This session will be cover&lt;br /&gt;- Windows 8 Overview &lt;br /&gt;- Developing for Windows 8&lt;br /&gt;- Developer Tooling changes&lt;br /&gt;- Delivering Windows 8 applications&lt;br /&gt;Robert will be joined in this session by Steve Spencer, Development Director of Black Marble.&lt;/p&gt;\"
+			},
+			{
+				\"id\" : \"8\",
+				\"title\" : \"Introduction to Android from a .NET-er\",
+				\"speaker\" : \"Will Charles\",
+				\"start_time\": \"08/10/2011 10:45\",
+				\"room\": \"110\",
+				\"description\": \"&lt;span&gt;During this session we will attempt to write a native Android app (Yes that means Java) to view photos from Facebook and set them as the background image on the device.&lt;span&gt;&amp;nbsp; &lt;/span&gt;Along the way we will see the basics of intents, activities and layouts.&lt;span&gt;&amp;nbsp; &lt;/span&gt;As well as showing the strange little bits of Java that threw this poor .NET developer!&lt;/span&gt;\"
 			}		
 		]
 	}
