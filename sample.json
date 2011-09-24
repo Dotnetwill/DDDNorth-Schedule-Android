@@ -1,5 +1,9 @@
 [
     {
+        \"slot_display_name\": \"8:30 - 9:30 - Registration and Welcome\",
+        \"sessions\" :  []
+    },
+    {
         \"slot_display_name\": \"9:30 - 10:30\", 
         \"sessions\" :  [
             {
@@ -35,6 +39,10 @@
                 \"description\": \"&lt;p&gt;Data Access is a difficult area to master.&amp;nbsp; There are plenty of frameworks such as Entity Framework, NHibernate, i/myBatis.&amp;nbsp; There frameworks attempt to make data access simpler but while these products are widely used they lead to leaky abstractions forcing us to work around constraints of the technology or introduce the nightmare of trying to figure out what is happening deep down in the frameworks internals.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In this session we will look at the various lightweight alternatives and the advantages they offer as well as provide rationale about why the more heavyweight approach is seldom the best approach.&lt;/div&gt;&lt;/p&gt;\"
             }       
         ]
+    },
+    {
+        \"slot_display_name\": \"10:30 - 10:45 - Break\",
+        \"sessions\" :  []
     },
     {
         \"slot_display_name\": \"10:45 - 11:45\",
@@ -74,6 +82,10 @@
         ]
     },
     {
+        \"slot_display_name\": \"11:45 - 12:00 - Break\",
+        \"sessions\" :  []
+    },
+    {
         \"slot_display_name\": \"12:00 - 13:00\",
         \"sessions\" :  [
             {
@@ -86,7 +98,7 @@
             },
             {
                 \"id\" : \"10\",
-                \"title\" : \"&quot;he Happy Developer&quot; - Is it a Myth?\",
+                \"title\" : \"&quot;The Happy Developer&quot; - Is it a Myth?\",
                 \"speaker\" : \"Andy Gibson\",
                 \"start_time\": \"08/10/2011 12:00\",
                 \"room\": \"108\",
@@ -109,6 +121,10 @@
                 \"description\": \"&lt;p&gt;&lt;span&gt;JavaScript is going from a niche tool to pretty much a requirement in modern times. It is an extremely flexible language and as such, it is quite easy to end up with an unmanageable mess that &quot;works&quot;. We seem to focus so much on unit testing everything server side, yet pay so little attention to what runs on the browser. In this session, we&#39;ll look at a clean approach to using JavaScript &quot;objects&quot; - not mimicking languages like C# but using what&#39;s already in the language. We will quickly look at how we can use these objects with an MVVM framework called Knockout. We will use QUnit to unit test our code and then integrate it into a build script.&lt;/span&gt;&lt;/p&gt;\"
             }       
         ]
+    },
+    {
+        \"slot_display_name\": \"13:00 - 14:30 - Lunch and Grok Talks\",
+        \"sessions\" :  []
     },
     {
         \"slot_display_name\": \"14:30 - 15:30\",
@@ -148,6 +164,10 @@
         ]
     },
     {
+        \"slot_display_name\": \"15:30 - 15:45 - Break\",
+        \"sessions\" :  []
+    },
+    {
         \"slot_display_name\": \"15:45 - 16:45\",
         \"sessions\" :  [
             {
@@ -183,5 +203,9 @@
                 \"description\": \"&lt;p&gt;Caliburn.Micro is a lightweight, fully-featured, open-source MVVM (Model View View-Model) framework that supports WPF, Silverlight and Windows Phone 7. &lt;br&gt;&lt;br&gt;In this session Barry will give you a brief overview of MVVM and then show you how to use Caliburn.Micro to go from an empty project to a fully working Silverlight application. Along the way, Barry will demonstrate how Caliburn.Micro takes advantage of Convention-over-Configuration to bring together your View-Models and Views. He will also show you how any UI event can routed to your View-Models and how you can data-bind directly to your View-Models. You will also learn how to work with nested views and how to configure Caliburn.Micro to work with your favourite Dependency Injection framework.&lt;/p&gt;\"
             }       
         ]
+    },
+    {
+        \"slot_display_name\": \"16:45 - 17:00 - Close (and Prizes?)\",
+        \"sessions\" :  []
     }
 ]
