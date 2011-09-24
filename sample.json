@@ -1,113 +1,187 @@
 [
     {
-		\"slot_display_name\": \"9:30am - 10:30am\", 
-		\"sessions\" :  [
-			{
-				\"id\" : \"1\",
-				\"title\" : \"Node.js - let's look at it\",
-				\"speaker\" : \"Rob Ashton\",
-				\"start_time\": \"08/10/2011 09:30\",
-				\"room\": \"107\",
-				\"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
-			},
-			{
-				\"id\" : \"2\",
-				\"title\" : \"Behaviour Driven Development\",
-				\"speaker\" : \"Ian Cooper\",
-				\"start_time\": \"08/10/2011 09:30\",
-				\"room\": \"108\",
-				\"description\": \"&lt;p&gt;&lt;span style=&quot;font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; &quot;&gt;&lt;span&gt;Behavior Driven Development (or BDD) is an Agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. It was originally named in 2003 by Dan North as a response to Test Driven Development (TDD), and to Framework for Integrated Tests concepts, from the Customer Test practice in Extreme Programming. It has evolved over the last few years from a better way of doing TDD, through the inclusion of acceptance-test driven development (ATDD) to a full stack agile methodology. In this presentation we will explain how to do BDD and why its not about tools such as Specflow or Cucumber, but about approach. However, we&#39;ll give you a taste of those tools, once we have explained why you might need them.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"3\",
-				\"title\" : \"Reactive Extensions for .NET for the Rest of Us\",
-				\"speaker\" : \"Mike Taulty\",
-				\"start_time\": \"08/10/2011 09:30\",
-				\"room\": \"109\",
-				\"description\": \"&lt;p&gt;The Reactive Extensions for .NET library from Microsoft’s DevLabs provides an intriguing insight into how .NET in the future might deal with asynchronous or event-based programming. But, if you’ve taken a glance at Rx, it can sometimes feel as though Rx was invented by rocket scientists for rocket scientists. In this session, a non-rocket-scientist will walk through the basics of Rx from scratch, talking about what problem the framework is trying to solve, the simple interfaces that underpin its workings and looking at simple, common examples of where Rx might help in your development today and tomorrow.&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"4\",
-				\"title\" : \"refORM - Death to ORMs in .NET\",
-				\"speaker\" : \"James Hughes\",
-				\"start_time\": \"08/10/2011 09:30\",
-				\"room\": \"110\",
-				\"description\": \"&lt;p&gt;Data Access is a difficult area to master.&amp;nbsp; There are plenty of frameworks such as Entity Framework, NHibernate, i/myBatis.&amp;nbsp; There frameworks attempt to make data access simpler but while these products are widely used they lead to leaky abstractions forcing us to work around constraints of the technology or introduce the nightmare of trying to figure out what is happening deep down in the frameworks internals.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In this session we will look at the various lightweight alternatives and the advantages they offer as well as provide rationale about why the more heavyweight approach is seldom the best approach.&lt;/div&gt;&lt;/p&gt;\"
-			}		
-		]
-	},
-	{
-		\"slot_display_name\": \"10:45am - 11:45am\",
-		\"sessions\" :  [
-			{
-				\"id\" : \"5\",
-				\"title\" : \"Tips and Tricks : Lightning fast pages\",
-				\"speaker\" : \"Phil Winstanley\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"107\",
-				\"description": \"&lt;p&gt;&lt;BODY&gt;Speed matters, to your users, to your boss, but most importantly, to you, especially when you&#39;re working on a site a lot, the faster you can get pages to render the more you can get done.&lt;BR&gt;&lt;BR&gt;In this session we&#39;ll fly through dozens of tips and tricks for speeding up you Web page load times.&lt;BR&gt;&lt;BR&gt;We&#39;ll discuss Browser differences, HTML, Javascript, Network strategies as well as other methods of making your pages load as quickly as possible.&lt;BR&gt;&lt;BR&gt;This will be a beggining/intermediate level session, but if you&#39;re a hardcore developer than maybe you&#39;ll pick up some things you don&#39;t know already too!&lt;BR&gt;&lt;/BODY&gt;&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"6\",
-				\"title\" : \"Commercial Software Development - Writing Software Is Easy, Not Going Bust Is The Hard Bi",
-				\"speaker\" : \"Liam Westley\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"108\",
-				\"description\": \"&lt;p&gt;There are three excellent ways to lose lots of money; open a restaurant, own a football club or start a software development company.&lt;br&gt;&lt;br&gt; Liam will provide a personal and subjective view on some of the tactics that he has found useful when running a software development company, to ensure it enjoys a 1st birthday party.&lt;br&gt;&lt;br&gt; Liam will be assuming that you can write code, work hard, have commercial &lt;br&gt;ideas and have clients or sales leads.&lt;br&gt;&lt;br&gt; We won’t focus on any particular technology or framework, instead topics will include; Support, Testing, Logging, Time/Cost Estimates, Paperwork and Sales Pitches.&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"7\",
-				\"title\" : \"Re-Build: A One Hour developer’s view of Windows 8\",
-				\"speaker\" : \"Robert Hogg\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"109\",
-				\"description\": \"&lt;p&gt;At Build in September, Microsoft will announce Windows 8.&lt;br /&gt;Windows 8 is expected to have features such as support for System on A chip, Touch First Interface and HTML 5 applications – all available through an app store.  It is expected that Microsoft will deliver Windows 8 next year but why wait that long to get ready? Join us for a comprehensive overview of what’s new, what’s bad and how to get connected to Windows 8.&lt;br /&gt;This session will be cover&lt;br /&gt;- Windows 8 Overview &lt;br /&gt;- Developing for Windows 8&lt;br /&gt;- Developer Tooling changes&lt;br /&gt;- Delivering Windows 8 applications&lt;br /&gt;Robert will be joined in this session by Steve Spencer, Development Director of Black Marble.&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"8\",
-				\"title\" : \"Introduction to Android from a .NET-er\",
-				\"speaker\" : \"Will Charles\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"110\",
-				\"description\": \"&lt;span&gt;During this session we will attempt to write a native Android app (Yes that means Java) to view photos from Facebook and set them as the background image on the device.&lt;span&gt;&amp;nbsp; &lt;/span&gt;Along the way we will see the basics of intents, activities and layouts.&lt;span&gt;&amp;nbsp; &lt;/span&gt;As well as showing the strange little bits of Java that threw this poor .NET developer!&lt;/span&gt;\"
-			}		
-		]
-	},
-	{
-		\"slot_display_name\": \"10:45am - 11:45am\",
-		\"sessions\" :  [
-			{
-				\"id\" : \"5\",
-				\"title\" : \"Tips and Tricks : Lightning fast pages\",
-				\"speaker\" : \"Phil Winstanley\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"107\",
-				\"description": \"&lt;p&gt;&lt;BODY&gt;Speed matters, to your users, to your boss, but most importantly, to you, especially when you&#39;re working on a site a lot, the faster you can get pages to render the more you can get done.&lt;BR&gt;&lt;BR&gt;In this session we&#39;ll fly through dozens of tips and tricks for speeding up you Web page load times.&lt;BR&gt;&lt;BR&gt;We&#39;ll discuss Browser differences, HTML, Javascript, Network strategies as well as other methods of making your pages load as quickly as possible.&lt;BR&gt;&lt;BR&gt;This will be a beggining/intermediate level session, but if you&#39;re a hardcore developer than maybe you&#39;ll pick up some things you don&#39;t know already too!&lt;BR&gt;&lt;/BODY&gt;&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"6\",
-				\"title\" : \"Commercial Software Development - Writing Software Is Easy, Not Going Bust Is The Hard Bi",
-				\"speaker\" : \"Liam Westley\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"108\",
-				\"description\": \"&lt;p&gt;There are three excellent ways to lose lots of money; open a restaurant, own a football club or start a software development company.&lt;br&gt;&lt;br&gt; Liam will provide a personal and subjective view on some of the tactics that he has found useful when running a software development company, to ensure it enjoys a 1st birthday party.&lt;br&gt;&lt;br&gt; Liam will be assuming that you can write code, work hard, have commercial &lt;br&gt;ideas and have clients or sales leads.&lt;br&gt;&lt;br&gt; We won’t focus on any particular technology or framework, instead topics will include; Support, Testing, Logging, Time/Cost Estimates, Paperwork and Sales Pitches.&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"7\",
-				\"title\" : \"Re-Build: A One Hour developer’s view of Windows 8\",
-				\"speaker\" : \"Robert Hogg\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"109\",
-				\"description\": \"&lt;p&gt;At Build in September, Microsoft will announce Windows 8.&lt;br /&gt;Windows 8 is expected to have features such as support for System on A chip, Touch First Interface and HTML 5 applications – all available through an app store.  It is expected that Microsoft will deliver Windows 8 next year but why wait that long to get ready? Join us for a comprehensive overview of what’s new, what’s bad and how to get connected to Windows 8.&lt;br /&gt;This session will be cover&lt;br /&gt;- Windows 8 Overview &lt;br /&gt;- Developing for Windows 8&lt;br /&gt;- Developer Tooling changes&lt;br /&gt;- Delivering Windows 8 applications&lt;br /&gt;Robert will be joined in this session by Steve Spencer, Development Director of Black Marble.&lt;/p&gt;\"
-			},
-			{
-				\"id\" : \"8\",
-				\"title\" : \"Introduction to Android from a .NET-er\",
-				\"speaker\" : \"Will Charles\",
-				\"start_time\": \"08/10/2011 10:45\",
-				\"room\": \"110\",
-				\"description\": \"&lt;span&gt;During this session we will attempt to write a native Android app (Yes that means Java) to view photos from Facebook and set them as the background image on the device.&lt;span&gt;&amp;nbsp; &lt;/span&gt;Along the way we will see the basics of intents, activities and layouts.&lt;span&gt;&amp;nbsp; &lt;/span&gt;As well as showing the strange little bits of Java that threw this poor .NET developer!&lt;/span&gt;\"
-			}		
-		]
-	}
+        \"slot_display_name\": \"9:30 - 10:30\", 
+        \"sessions\" :  [
+            {
+                \"id\" : \"1\",
+                \"title\" : \"Node.js - let&#39;s look at it\",
+                \"speaker\" : \"Rob Ashton\",
+                \"start_time\": \"08/10/2011 09:30\",
+                \"room\": \"107\",
+                \"description\": \"&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;\/div&gt;&lt;\/p&gt;\"
+            },
+            {
+                \"id\" : \"2\",
+                \"title\" : \"Behaviour Driven Development\",
+                \"speaker\" : \"Ian Cooper\",
+                \"start_time\": \"08/10/2011 09:30\",
+                \"room\": \"108\",
+                \"description\": \"&lt;p&gt;&lt;span style=&quot;font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; &quot;&gt;&lt;span&gt;Behavior Driven Development (or BDD) is an Agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. It was originally named in 2003 by Dan North as a response to Test Driven Development (TDD), and to Framework for Integrated Tests concepts, from the Customer Test practice in Extreme Programming. It has evolved over the last few years from a better way of doing TDD, through the inclusion of acceptance-test driven development (ATDD) to a full stack agile methodology. In this presentation we will explain how to do BDD and why its not about tools such as Specflow or Cucumber, but about approach. However, we&#39;ll give you a taste of those tools, once we have explained why you might need them.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"3\",
+                \"title\" : \"Reactive Extensions for .NET for the Rest of Us\",
+                \"speaker\" : \"Mike Taulty\",
+                \"start_time\": \"08/10/2011 09:30\",
+                \"room\": \"109\",
+                \"description\": \"&lt;p&gt;The Reactive Extensions for .NET library from Microsoft’s DevLabs provides an intriguing insight into how .NET in the future might deal with asynchronous or event-based programming. But, if you’ve taken a glance at Rx, it can sometimes feel as though Rx was invented by rocket scientists for rocket scientists. In this session, a non-rocket-scientist will walk through the basics of Rx from scratch, talking about what problem the framework is trying to solve, the simple interfaces that underpin its workings and looking at simple, common examples of where Rx might help in your development today and tomorrow.&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"4\",
+                \"title\" : \"refORM - Death to ORMs in .NET\",
+                \"speaker\" : \"James Hughes\",
+                \"start_time\": \"08/10/2011 09:30\",
+                \"room\": \"110\",
+                \"description\": \"&lt;p&gt;Data Access is a difficult area to master.&amp;nbsp; There are plenty of frameworks such as Entity Framework, NHibernate, i/myBatis.&amp;nbsp; There frameworks attempt to make data access simpler but while these products are widely used they lead to leaky abstractions forcing us to work around constraints of the technology or introduce the nightmare of trying to figure out what is happening deep down in the frameworks internals.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In this session we will look at the various lightweight alternatives and the advantages they offer as well as provide rationale about why the more heavyweight approach is seldom the best approach.&lt;/div&gt;&lt;/p&gt;\"
+            }       
+        ]
+    },
+    {
+        \"slot_display_name\": \"10:45 - 11:45\",
+        \"sessions\" :  [
+            {
+                \"id\" : \"5\",
+                \"title\" : \"Tips and Tricks : Lightning fast pages\",
+                \"speaker\" : \"Phil Winstanley\",
+                \"start_time\": \"08/10/2011 10:45\",
+                \"room\": \"107\",
+                \"description\": \"&lt;p&gt;&lt;BODY&gt;Speed matters, to your users, to your boss, but most importantly, to you, especially when you&#39;re working on a site a lot, the faster you can get pages to render the more you can get done.&lt;BR&gt;&lt;BR&gt;In this session we&#39;ll fly through dozens of tips and tricks for speeding up you Web page load times.&lt;BR&gt;&lt;BR&gt;We&#39;ll discuss Browser differences, HTML, Javascript, Network strategies as well as other methods of making your pages load as quickly as possible.&lt;BR&gt;&lt;BR&gt;This will be a beggining/intermediate level session, but if you&#39;re a hardcore developer than maybe you&#39;ll pick up some things you don&#39;t know already too!&lt;BR&gt;&lt;/BODY&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"6\",
+                \"title\" : \"Commercial Software Development - Writing Software Is Easy, Not Going Bust Is The Hard Bit\",
+                \"speaker\" : \"Liam Westley\",
+                \"start_time\": \"08/10/2011 10:45\",
+                \"room\": \"108\",
+                \"description\": \"&lt;p&gt;There are three excellent ways to lose lots of money; open a restaurant, own a football club or start a software development company.&lt;br&gt;&lt;br&gt; Liam will provide a personal and subjective view on some of the tactics that he has found useful when running a software development company, to ensure it enjoys a 1st birthday party.&lt;br&gt;&lt;br&gt; Liam will be assuming that you can write code, work hard, have commercial &lt;br&gt;ideas and have clients or sales leads.&lt;br&gt;&lt;br&gt; We won’t focus on any particular technology or framework, instead topics will include; Support, Testing, Logging, Time/Cost Estimates, Paperwork and Sales Pitches.&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"7\",
+                \"title\" : \"Re-Build: A One Hour developer’s view of Windows 8\",
+                \"speaker\" : \"Robert Hogg\",
+                \"start_time\": \"08/10/2011 10:45\",
+                \"room\": \"109\",
+                \"description\": \"&lt;p&gt;At Build in September, Microsoft will announce Windows 8.&lt;br /&gt;Windows 8 is expected to have features such as support for System on A chip, Touch First Interface and HTML 5 applications – all available through an app store.  It is expected that Microsoft will deliver Windows 8 next year but why wait that long to get ready? Join us for a comprehensive overview of what’s new, what’s bad and how to get connected to Windows 8.&lt;br /&gt;This session will be cover&lt;br /&gt;- Windows 8 Overview &lt;br /&gt;- Developing for Windows 8&lt;br /&gt;- Developer Tooling changes&lt;br /&gt;- Delivering Windows 8 applications&lt;br /&gt;Robert will be joined in this session by Steve Spencer, Development Director of Black Marble.&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"8\",
+                \"title\" : \"Introduction to Android from a .NET-er\",
+                \"speaker\" : \"Will Charles\",
+                \"start_time\": \"08/10/2011 10:45\",
+                \"room\": \"110\",
+                \"description\": \"&lt;span&gt;During this session we will attempt to write a native Android app (Yes that means Java) to view photos from Facebook and set them as the background image on the device.&lt;span&gt;&amp;nbsp; &lt;/span&gt;Along the way we will see the basics of intents, activities and layouts.&lt;span&gt;&amp;nbsp; &lt;/span&gt;As well as showing the strange little bits of Java that threw this poor .NET developer!&lt;/span&gt;\"
+            }       
+        ]
+    },
+    {
+        \"slot_display_name\": \"12:00 - 13:00\",
+        \"sessions\" :  [
+            {
+                \"id\" : \"9\",
+                \"title\" : \"CoffeeScript 101\",
+                \"speaker\" : \"Mark Rendle\",
+                \"start_time\": \"08/10/2011 12:00\",
+                \"room\": \"107\",
+                \"description\": \"  &lt;p&gt;Hidden deep within JavaScript, there is an elegant, powerful and clean language waiting to be discovered. This subset of the language was documented by Douglas Crockford in JavaScript: The Good Parts. Now, that subset is accessible through the CoffeeScript language. It&#39;s like Python and Ruby spent a wonderful night together and spawned a beautiful baby scripting language that is succinct, expressive and compiles to The Good Parts.&lt;br /&gt;Modules, classes, lambdas and more are supported, and you can interact with your existing JavaScript code, as well as &lt;strike&gt;all the diverse, wonderful libraries that are out there&lt;/strike&gt; jQuery.&lt;br /&gt;This session will cover the basics of the language, and interoperability with existing libraries. I&#39;ll also show you how to integrate CoffeeScript into your development process, with Visual Studio and other tooling as well as runtime compilation for on-the-fly changes.&lt;br /&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"10\",
+                \"title\" : \"&quot;he Happy Developer&quot; - Is it a Myth?\",
+                \"speaker\" : \"Andy Gibson\",
+                \"start_time\": \"08/10/2011 12:00\",
+                \"room\": \"108\",
+                \"description\": \"&lt;p&gt;&lt;div&gt;It&#39;s a great time to be a developer right now don&#39;t you think? Even in all of the economic chaos we still have it pretty good so what reason would any of us have to not be happy in our jobs?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The answer, as it turns out, is quite a lot. We have had our rants about poor management choices, the lack of proper code reviews, having to work with outdated/inappropriate technology, processes and methodologies, demands and pressure from those above us and we put up with it because at the end of the day, it pays the bills.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In this session I will explore with you the pitfalls of being a developer in these difficult times and with the help of some case studies and good old-fashioned reasoning, give suggestions on how these frustrations can be addressed.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If you are stressing out over a problem in your job, bring it with you, this is built entirely on experience from developers who have been there.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Audience participation is encouraged and this session is not technology or platform specific.&lt;/div&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"11\",
+                \"title\" : \"Defensive Programming 101\",
+                \"speaker\" : \"Niall Merrigan\",
+                \"start_time\": \"08/10/2011 12:00\",
+                \"room\": \"109\",
+                \"description\": \"  &lt;p&gt;10 common security mistakes that developers make when developing web applications and how to avoid them.&lt;br&gt; &lt;br&gt; Covers topics such as XSS, SQL injection, correct permissions and securing your web.config file&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"12\",
+                \"title\" : \"Clean Up Your JavaScript Act\",
+                \"speaker\" : \"Ashic Mahtab\",
+                \"start_time\": \"08/10/2011 12:00\",
+                \"room\": \"110\",
+                \"description\": \"&lt;p&gt;&lt;span&gt;JavaScript is going from a niche tool to pretty much a requirement in modern times. It is an extremely flexible language and as such, it is quite easy to end up with an unmanageable mess that &quot;works&quot;. We seem to focus so much on unit testing everything server side, yet pay so little attention to what runs on the browser. In this session, we&#39;ll look at a clean approach to using JavaScript &quot;objects&quot; - not mimicking languages like C# but using what&#39;s already in the language. We will quickly look at how we can use these objects with an MVVM framework called Knockout. We will use QUnit to unit test our code and then integrate it into a build script.&lt;/span&gt;&lt;/p&gt;\"
+            }       
+        ]
+    },
+    {
+        \"slot_display_name\": \"14:30 - 15:30\",
+        \"sessions\" :  [
+            {
+                \"id\" : \"13\",
+                \"title\" : \"Taking advantage of the Amazon Web Services (AWS) family\",
+                \"speaker\" : \"Ben Hall\",
+                \"start_time\": \"08/10/2011 14:30\",
+                \"room\": \"107\",
+                \"description\": \"&lt;p&gt;&lt;div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;/div&gt;&lt;span&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;The AWS family is massive, and with so many services, settings and horror stores it can be intimidating. In this talk, we&#39;ll discuss how you can take advantage of the AWS family and what role each service plays.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;To start, we&#39;ll discuss the Simple Storage Service (&lt;b&gt;S3&lt;/b&gt;) and how it&#39;s storage capabilities can help with examples from companies like twitter on there usage.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;There will be a tour of Elastic Cloud Computing (&lt;b&gt;EC2&lt;/b&gt;), discussing what the different Instance Sizes \\ Availability Zones \\ Regions actually mean and how you&#39;ll need to be aware of Security Groups \\ Key Pairs to be secure with &lt;b&gt;EBS&lt;/b&gt; Volumes and snapshots to be reliable. One of the main advantages of EC2 is the scaling capabilities, so we&#39;ll talk about Load Balances and Auto Scaling functionality.&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;To ensure the system is available, Ben will demonstrate how &lt;b&gt;CloudWatch&lt;/b&gt; gives you insights into your Amazon services, helping you understand what&#39;s happening.&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;Ben will then discuss the lessor known services, such as Relational Database Service (&lt;b&gt;RDS&lt;/b&gt;), Elastic &lt;b&gt;MapReduce&lt;/b&gt; and Amazon Simple Notification Service (&lt;b&gt;SNS&lt;/b&gt;), can provide powerful capabilities and make a massive impact on to the capabilities of your systems.&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;With a core understanding, it&#39;s important to be able to automate the process and how the &lt;b&gt;SDK&lt;/b&gt; is key to being successful on AWS.&amp;nbsp;But most importantly, Ben will discuss the cost of AWS and how you can understand and estimate the monthly cost.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;As a result, you will leave with a understanding about how AWS fits together and which services would be useful for your own system.&amp;nbsp;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;font-family: arial, sans-serif; font-size: 13px; &quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"14\",
+                \"title\" : \"Kanban? What is it and how can it help?\",
+                \"speaker\" : \"Nathan Gloyn\",
+                \"start_time\": \"08/10/2011 14:30\",
+                \"room\": \"108\",
+                \"description\": \"&lt;p&gt;&lt;p&gt;Agile, agile, agile, thats all you hear.&amp;nbsp; You know about TDD, CI and all the other lovely technical practices but perhaps getting a form of agile working practice is proving a little more difficult.&lt;br&gt; &lt;br&gt; Enter Kanban! A lightweight working practice to help you visualise and track your work.&lt;br&gt; &lt;br&gt; Come to the session and I&#39;ll introduce you to Kanban, show you how it works, how you can use it and customize it to suit your own situation.&lt;/p&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"15\",
+                \"title\" : \"Advanced NodeJS - The Session After Rob&#39;s :-)\",
+                \"speaker\" : \"Gary Short\",
+                \"start_time\": \"08/10/2011 14:30\",
+                \"room\": \"109\",
+                \"description\": \"&lt;p&gt;So NodeJS is this really cool way of writing non-blocking, server side code, in a really crappy language. Well maybe that&#39;s unfair, Javascript has some really, really good bits, and we&#39;ll stick to using the really good bits in this session, which follows on from Rob Ashton&#39;s introduction. If picked to present, I&#39;ll show you how to build a RESTful API in NodeJS, how to use it in Node - including routing - and how to wrap in all up in a package that can be installed using NPM. Not bad for an hour&#39;s work, hell, we may even have the odd laugh along the way. :-)&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"16\",
+                \"title\" : \"Continuous Delivery\",
+                \"speaker\" : \"Paul Stack\",
+                \"start_time\": \"08/10/2011 14:30\",
+                \"room\": \"110\",
+                \"description\": \"&lt;p&gt;&lt;span&gt;Continuous Delivery is all about&amp;nbsp;allow features to be delivered in a more timely and reliable fashion. In this session, I will:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;span&gt;- introduce the concepts of continuous delivery, through continuous integration; and automation of the build, test and deployment process&lt;/span&gt;&lt;div&gt; &lt;/div&gt;&lt;span&gt;- talk about&amp;nbsp;Version control techniques for Continuous Delivery&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span&gt;- talk about the&amp;nbsp;Roadmap to Continuous Delivery Adoption-&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp;talk about the Pitfalls, Objections and Obstacles&lt;/span&gt;&lt;div&gt; &lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;\"
+            }       
+        ]
+    },
+    {
+        \"slot_display_name\": \"15:45 - 16:45\",
+        \"sessions\" :  [
+            {
+                \"id\" : \"17\",
+                \"title\" : \"Introduction to Backbone.js\",
+                \"speaker\" : \"Garry Shutler\",
+                \"start_time\": \"08/10/2011 15:45\",
+                \"room\": \"107\",
+                \"description\": \"&lt;p&gt;&lt;div&gt;The web is moving towards rich HTML+Javascript sites backed by web services. Backbone.js is a framework which makes writing these kind of sites much easier.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;We&#39;ll cover all the basics of Backbone.js such as models, events and routing and how you hook it all up to a RESTful JSON service.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;After this talk you will know how to get started with Backbone.js and take your sites to the next level.&lt;/div&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"18\",
+                \"title\" : \"The 10 habits of highly effective programmers\",
+                \"speaker\" : \"Dennis Doomen\",
+                \"start_time\": \"08/10/2011 15:45\",
+                \"room\": \"108\",
+                \"description\": \"&lt;p&gt;&lt;BODY&gt;Our job as a software developer seems to revolve mostly around programming languages, frameworks and Visual Studio. And to be honest, most of us have their hands full with that already. However, our profession includes a whole bunch of best practices that can seriously improve the efficiency and effectiveness of you and your teams, help you to deliver at a higher quality, or involve the business even more. Many of those practices are encompassed by the Application Lifecycle Management concept, but some of you might be more familiar with the term Software Factories. &amp;nbsp;o what am I talking about? Well, think about Unit Testing (and TDD/BDD), Peer Reviews, Daily builds &amp;amp; Continuous Integration, Brown Paper Sessions, Coding Standards, Common Code Layout, Static Code Analysis, Refactoring, Evolutionary Design, Checklists and Pair Programming. &amp;nbsp; Do you want to know what those practices are about and why should include them in your toolbox? Join me in this quick overview, or even better, share your own experiences with the audience. &amp;nbsp; Level: Beginner Keywords: Agile, Scrum, XP, Best Practices&lt;/BODY&gt;&lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"19\",
+                \"title\" : \"Kinect the dots\",
+                \"speaker\" : \"John Price\",
+                \"start_time\": \"08/10/2011 15:45\",
+                \"room\": \"109\",
+                \"description\": \"&lt;p&gt;So, you feel the need to stand in front of your computer and wave frantically at it? You do? then you should come to this session and see how all that gesticulating can be harnessed. Will will have a look at how the Kinect can recongnise your skeleton, understand what bones are, and maybe have a go at controlling&amp;nbsp;some of your house with various gestures. &amp;nbsp;Might even get fit as a result! &lt;/p&gt;\"
+            },
+            {
+                \"id\" : \"20\",
+                \"title\" : \"Caliburn.Micro: Painless MVVM apps for Silverlight and WPF\",
+                \"speaker\" : \"Barry Carr\",
+                \"start_time\": \"08/10/2011 15:45\",
+                \"room\": \"110\",
+                \"description\": \"&lt;p&gt;Caliburn.Micro is a lightweight, fully-featured, open-source MVVM (Model View View-Model) framework that supports WPF, Silverlight and Windows Phone 7. &lt;br&gt;&lt;br&gt;In this session Barry will give you a brief overview of MVVM and then show you how to use Caliburn.Micro to go from an empty project to a fully working Silverlight application. Along the way, Barry will demonstrate how Caliburn.Micro takes advantage of Convention-over-Configuration to bring together your View-Models and Views. He will also show you how any UI event can routed to your View-Models and how you can data-bind directly to your View-Models. You will also learn how to work with nested views and how to configure Caliburn.Micro to work with your favourite Dependency Injection framework.&lt;/p&gt;\"
+            }       
+        ]
+    }
 ]

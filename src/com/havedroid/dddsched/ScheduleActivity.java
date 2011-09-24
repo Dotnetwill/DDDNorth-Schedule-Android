@@ -81,7 +81,7 @@ public class ScheduleActivity extends TabActivity  {
 			mAllAdapter = new SectionedListAdapter(this);
 			ListAdapter filteredList = getMySessionsAdapter();
 			mAllAdapter.setFilteredList(filteredList);
-			for(SessionSlot slot : Schedule.getSchedule(this)){
+			for(SessionSlot slot : Schedule.getSchedule()){
 				ScheduleListViewAdapter sessionAdapter = new ScheduleListViewAdapter(this, slot.getSessions());
 				mAllAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
 			}
@@ -92,7 +92,7 @@ public class ScheduleActivity extends TabActivity  {
 	private ListAdapter getMySessionsAdapter(){
 		if(mMySessionsAdapter == null){
 			mMySessionsAdapter = new SectionedListAdapter(this);
-			for(SessionSlot slot : Schedule.getSchedule(this)){
+			for(SessionSlot slot : Schedule.getSchedule()){
 				AttendingSessionsListViewAdapter sessionAdapter = new AttendingSessionsListViewAdapter(this, slot.getSessions());
 				mMySessionsAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
 			}

@@ -1,11 +1,8 @@
 package com.havedroid.dddsched.data;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.havedroid.dddsched.Constants;
-import com.havedroid.dddsched.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,16 +25,16 @@ public class Schedule {
 	
 	private static List<SessionSlot> mSchedule = null;
 	
-	public static List<SessionSlot> getSchedule(Context context){
+	public static List<SessionSlot> getSchedule(){
 		if(mSchedule == null){
-			loadSchedule(context);
+			loadSchedule();
 		}
 		
 		return mSchedule;
 	}
 
-	private static void loadSchedule(Context context) {
-		String defaultSchedule = context.getString(R.string.schedule);
+	private static void loadSchedule() {
+		String defaultSchedule = Constants.SCHEDULE;
 		JSONArray fullSchedule;
 		
 		mSchedule = new ArrayList<SessionSlot>();
@@ -50,7 +47,6 @@ public class Schedule {
 				mSchedule.add(createSessionSlot(slot));
 			}
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			Log.e(Constants.LOG_TAG, "Exception caught:" + e.getMessage());
 			
 			e.printStackTrace();

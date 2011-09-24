@@ -29,6 +29,8 @@ public class DDDNorthScheduleActivity extends Activity {
         setContentView(R.layout.main);
         mContext = getApplicationContext();
         
+        SetupAppContants();
+        
         mSessionTitle = (TextView)findViewById(R.id.next_session_title);
 		mShortInfo = (TextView)findViewById(R.id.next_session_short_info);
 		mShowSchedule = (Button)findViewById(R.id.ShowSchedule);
@@ -37,6 +39,11 @@ public class DDDNorthScheduleActivity extends Activity {
         displayNextSession();
     }
     
+	private void SetupAppContants() {
+		//this is terrible I know but it's quick and easy and I'm in a pragmatic mood
+		Constants.SCHEDULE = mContext.getString(R.string.schedule);
+	}
+
 	@Override
 	public void onResume(){
 		super.onResume();
@@ -60,7 +67,7 @@ public class DDDNorthScheduleActivity extends Activity {
     	Session nextSession = null; 
     	
     	long timeToNextSession = 0;
-    	for(SessionSlot slot : Schedule.getSchedule(mContext)){
+    	for(SessionSlot slot : Schedule.getSchedule()){
     		for(Session session : slot.getSessions()){
     			if(session.getAttending(mContext)){
     				timeToNextSession = getUtcDifferenceToDate(session.getStartTime());
