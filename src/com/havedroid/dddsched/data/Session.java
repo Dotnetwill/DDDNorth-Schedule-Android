@@ -78,7 +78,7 @@ public class Session implements Parcelable {
 	
 	public Date getStartTime() {
 		try {
-			DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+			DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 			return sdf.parse(mStartTime);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
