@@ -1,5 +1,6 @@
 package com.havedroid.dddsched;
 
+import android.os.AsyncTask;
 import com.havedroid.dddsched.data.Schedule;
 import com.havedroid.dddsched.data.SessionSlot;
 
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
+import org.apache.http.client.methods.HttpGet;
 
 public class ScheduleActivity extends TabActivity  {
 	
@@ -99,4 +101,12 @@ public class ScheduleActivity extends TabActivity  {
 		}
 		return mMySessionsAdapter;
 	}
+
+    private AsyncTask<Object, String, String> updateSessionList = new AsyncTask<Object, String, String>(){
+
+        @Override
+        protected String doInBackground(Object... objects) {
+            HttpGet getForVersion = new HttpGet("http://")
+        }
+    };
 }
