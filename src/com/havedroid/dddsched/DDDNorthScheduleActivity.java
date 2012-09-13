@@ -1,12 +1,5 @@
 package com.havedroid.dddsched;
 
-import java.util.Calendar;
-import java.util.Date;
-
-import com.havedroid.dddsched.data.Schedule;
-import com.havedroid.dddsched.data.Session;
-import com.havedroid.dddsched.data.SessionSlot;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import com.havedroid.dddsched.Util.*;
+import com.havedroid.dddsched.data.Schedule;
+import com.havedroid.dddsched.data.Session;
+import com.havedroid.dddsched.data.SessionSlot;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class DDDNorthScheduleActivity extends Activity {
     private static final int GRACE_TIME_BEFORE_MOVING_TO_NEXT_SESSION = 10;
@@ -22,8 +24,12 @@ public class DDDNorthScheduleActivity extends Activity {
 	private Context mContext;
 	private TextView mSessionTitle;
 	private TextView mShortInfo;
-	
-	@Override
+	private DDDNorthTwitter mTwitter;
+    private TextView tweetPerson;
+    private ImageView tweetImage;
+    private TextView tweetContent;
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
@@ -35,11 +41,29 @@ public class DDDNorthScheduleActivity extends Activity {
 		mShortInfo = (TextView)findViewById(R.id.next_session_short_info);
 		mShowSchedule = (Button)findViewById(R.id.ShowSchedule);
         mShowSchedule.setOnClickListener(showSchduleClick);
-        
+
+        tweetContent = (TextView)findViewById(R.id.Detail_TweetContent);
+        tweetImage = (ImageView)findViewById(R.id.Twitterer_Pic);
+        tweetPerson = (TextView)findViewById(R.id.Tweet_Twitterer);
+
+        mTwitter = new DDDNorthTwitter(getApplicationContext());
+
         displayNextSession();
+        loadHaloTweet();
+        new AsyncTwitterUpdate(twitterUpdated).execute(mTwitter);
     }
-    
-	private void SetupAppContants() {
+
+    private void loadHaloTweet() {
+        DDDTweet tweet = mTwitter.getHaloTweet();
+        if(tweet != null){
+            tweetContent.setText(tweet.content);
+            tweetPerson.setText(tweet.user);
+            tweetImage.setTag(tweet.profileImageUrl.replace("normal", "bigger"));
+            new AsyncImageViewLoader(getApplicationContext()).execute(tweetImage);
+        }
+    }
+
+    private void SetupAppContants() {
 		//this is terrible I know but it's quick and easy and I'm in a pragmatic mood
 		Constants.SCHEDULE = mContext.getString(R.string.schedule);
 	}
@@ -66,8 +90,8 @@ public class DDDNorthScheduleActivity extends Activity {
     	long smallestDifference = -1;
     	Session nextSession = null; 
     	
-    	long timeToNextSession = 0;
-    	for(SessionSlot slot : Schedule.getSchedule()){
+    	long timeToNextSession;
+    	for(SessionSlot slot : Schedule.getSchedule(getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE), true)){
     		for(Session session : slot.getSessions()){
     			if(session.getAttending(mContext)){
     				timeToNextSession = getUtcDifferenceToDate(session.getStartTime());
@@ -98,5 +122,14 @@ public class DDDNorthScheduleActivity extends Activity {
 			startActivity(showScheduleIntent);
 		}
     };
+
+    private TwitterUpdateComplete twitterUpdated = new TwitterUpdateComplete() {
+        @Override
+        public void onCompleted(List<DDDTweet> tweets) {
+            loadHaloTweet();
+        }
+    };
+
+
     
 }

@@ -1,12 +1,5 @@
 package com.havedroid.dddsched.data;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import com.havedroid.dddsched.Constants;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -14,6 +7,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.Html;
 import android.util.Log;
+import com.havedroid.dddsched.Constants;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Session implements Parcelable {
 	private static final int SHORT_DESC_LENGHT = 100;
@@ -102,7 +101,7 @@ public class Session implements Parcelable {
 	}
 	
 	public Boolean getAttending(Context context) {
-		SharedPreferences preferences = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
+		SharedPreferences preferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
 		String attendingSessions = preferences.getString("sessionsAttending", "");
 		Log.d(Constants.LOG_TAG, "Attending sessions string: " + attendingSessions);
 		
@@ -124,7 +123,7 @@ public class Session implements Parcelable {
 			return;
 		}
 		
-		SharedPreferences preferences = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
+		SharedPreferences preferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
 		String attendingSessions = preferences.getString("sessionsAttending", "");
 		
 		if(attending){

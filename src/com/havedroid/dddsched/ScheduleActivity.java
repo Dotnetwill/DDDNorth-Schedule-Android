@@ -1,43 +1,65 @@
 package com.havedroid.dddsched;
 
-import android.os.AsyncTask;
-import com.havedroid.dddsched.data.Schedule;
-import com.havedroid.dddsched.data.SessionSlot;
-
 import android.app.TabActivity;
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
-import org.apache.http.client.methods.HttpGet;
+import android.widget.Toast;
+import com.havedroid.dddsched.Util.DDDNorthTwitter;
+import com.havedroid.dddsched.Util.UpdateSchedule;
+import com.havedroid.dddsched.data.Schedule;
+import com.havedroid.dddsched.data.SessionSlot;
 
 public class ScheduleActivity extends TabActivity  {
 	
 	private final String ALL_SCHEDULE_TAG = "overall";
 	private final String MY_SCHEDULE_TAG = "myschedule";
-	
+    private final String DDD_TWEET_TAG = "dddtweets";
+
 	private SectionedListAdapter mAllAdapter;
 	private SectionedListAdapter mMySessionsAdapter;
-	
+	private DDDTweetListAdapter mTweetListAdapter;
+
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupTabs();
-        setupListAdapters();
-         
+        setupListAdapters(false);
+        updateSessionList.execute();
     }
 
-	private void setupListAdapters() {
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+    }
+
+	private void setupListAdapters(Boolean reload) {
 		ListView allScheduleList = (ListView)findViewById(R.id.AllScheduleListView);
-		allScheduleList.setAdapter(getAllSessionListAdapter());
+		allScheduleList.setAdapter(getAllSessionListAdapter(reload));
 	
 		ListView myScheduleList = (ListView)findViewById(R.id.MyScheduleListView);
-		myScheduleList.setAdapter(getMySessionsAdapter());
-		
+		myScheduleList.setAdapter(getMySessionsAdapter(reload));
+
+        ListView tweetListView = (ListView)findViewById(R.id.DDDTweetsView);
+        tweetListView.setAdapter(getTweetAdapater());
 	}
 
-	private void setupTabs() {
+    private ListAdapter getTweetAdapater() {
+        if(mTweetListAdapter == null){
+            Context context = getApplicationContext();
+            mTweetListAdapter = new DDDTweetListAdapter(context,
+                                                        new DDDNorthTwitter(context),
+                                                        getLayoutInflater());
+        }
+        return mTweetListAdapter;
+    }
+
+    private void setupTabs() {
 		TabHost tabs = getTabHost();
         TabHost.TabSpec tab;
         
@@ -58,7 +80,12 @@ public class ScheduleActivity extends TabActivity  {
         tab.setContent(R.id.MyScheduleLayout);
         tab.setIndicator("My Sessions");
         tabs.addTab(tab);
-	}
+
+        tab = tabs.newTabSpec(DDD_TWEET_TAG);
+        tab.setContent(R.id.DDDTweetsLayout);
+        tab.setIndicator("#DDDNorth");
+        tabs.addTab(tab);
+    }
 	
 	private TabHost.OnTabChangeListener mTabChangeListener = new TabHost.OnTabChangeListener() {
 		
@@ -70,20 +97,23 @@ public class ScheduleActivity extends TabActivity  {
 				if(mAllAdapter != null){
 					mAllAdapter.notifyAllDatasetChanges();
 				}
-			}else{
+			}else if(tabId.equals(MY_SCHEDULE_TAG)){
 				if(mMySessionsAdapter != null){
 					mMySessionsAdapter.notifyAllDatasetChanges();
 				}
-			}
+			}else
+            {
+             if(mTweetListAdapter != null){
+                mTweetListAdapter.refresh();
+             }
+            }
 		}
 	};
 	
-	private ListAdapter getAllSessionListAdapter(){
-		if(mAllAdapter == null){
+	private ListAdapter getAllSessionListAdapter(Boolean reload){
+		if(mAllAdapter == null || reload){
 			mAllAdapter = new SectionedListAdapter(this);
-			ListAdapter filteredList = getMySessionsAdapter();
-			mAllAdapter.setFilteredList(filteredList);
-			for(SessionSlot slot : Schedule.getSchedule()){
+			for(SessionSlot slot : getSessionSlots()){
 				ScheduleListViewAdapter sessionAdapter = new ScheduleListViewAdapter(this, slot.getSessions());
 				mAllAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
 			}
@@ -91,10 +121,10 @@ public class ScheduleActivity extends TabActivity  {
 		return mAllAdapter;
 	}
 	
-	private ListAdapter getMySessionsAdapter(){
-		if(mMySessionsAdapter == null){
+	private ListAdapter getMySessionsAdapter(Boolean reload){
+		if(mMySessionsAdapter == null || reload){
 			mMySessionsAdapter = new SectionedListAdapter(this);
-			for(SessionSlot slot : Schedule.getSchedule()){
+			for(SessionSlot slot : getSessionSlots()){
 				AttendingSessionsListViewAdapter sessionAdapter = new AttendingSessionsListViewAdapter(this, slot.getSessions());
 				mMySessionsAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
 			}
@@ -102,11 +132,25 @@ public class ScheduleActivity extends TabActivity  {
 		return mMySessionsAdapter;
 	}
 
-    private AsyncTask<Object, String, String> updateSessionList = new AsyncTask<Object, String, String>(){
+    private Iterable<SessionSlot> getSessionSlots()
+    {
+        return Schedule.getSchedule(getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE), true);
+    }
+
+    private AsyncTask<Object, Object, Boolean> updateSessionList = new AsyncTask<Object, Object, Boolean>(){
 
         @Override
-        protected String doInBackground(Object... objects) {
-            HttpGet getForVersion = new HttpGet("http://")
+        protected Boolean doInBackground(Object... objects) {
+            return UpdateSchedule.CheckForUpdate(getSharedPreferences("Session", Context.MODE_PRIVATE));
+        }
+
+        @Override
+        protected void onPostExecute(Boolean success) {
+            if(success){
+                setupListAdapters(true);
+                Log.v(Constants.LOG_TAG, "Reloaded list adapters");
+                Toast.makeText(getApplicationContext(), "Schedule Updated!", 20);
+            }
         }
     };
 }

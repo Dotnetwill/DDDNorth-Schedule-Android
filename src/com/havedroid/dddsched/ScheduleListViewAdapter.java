@@ -69,7 +69,7 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 		viewHolder.ClippDesc.setTag(curSession);
 		viewHolder.Room.setText(curSession.getRoom());
 		viewHolder.Speaker.setText(curSession.getSpeaker());
-		
+
 		return view;
 	}
 	

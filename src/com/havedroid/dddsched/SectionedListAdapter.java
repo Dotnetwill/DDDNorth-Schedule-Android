@@ -1,8 +1,5 @@
 package com.havedroid.dddsched;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
- 
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.view.View;
@@ -10,18 +7,20 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
- 
-    public class SectionedListAdapter extends BaseAdapter {
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class SectionedListAdapter extends BaseAdapter {
  
         public final Map<String, Adapter> sections = new LinkedHashMap<String, Adapter>();
         public final ArrayAdapter<String> headers;
-		private ListAdapter mFilteredList;
         public final static int TYPE_SECTION_HEADER = 0;
  
         public SectionedListAdapter(Context context) {
             headers = new ArrayAdapter<String>(context, R.layout.list_header);
         }
+
  
         public void addSection(String section, Adapter adapter) {
             this.headers.add(section);
@@ -87,11 +86,7 @@ import android.widget.ListAdapter;
             }
             return -1;
         }
- 
-        public boolean areAllItemsSelectable() {
-            return false;
-        }
- 
+
         public boolean isEnabled(int position) {
             return (getItemViewType(position) != TYPE_SECTION_HEADER);
         }
@@ -123,9 +118,6 @@ import android.widget.ListAdapter;
     		@Override
     		public void onChanged() {
     			notifyDataSetChanged();
-    			if(mFilteredList != null){
-    				((BaseAdapter)mFilteredList).notifyDataSetChanged();
-    			}
     		}
 
     		@Override
@@ -133,8 +125,4 @@ import android.widget.ListAdapter;
     			notifyDataSetInvalidated();
     		}
     	}
-
-		public void setFilteredList(ListAdapter filteredList) {
-			mFilteredList = filteredList;
-		}
     }

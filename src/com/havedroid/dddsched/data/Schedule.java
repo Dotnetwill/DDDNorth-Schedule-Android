@@ -1,16 +1,17 @@
 package com.havedroid.dddsched.data;
 
+import android.content.SharedPreferences;
 import android.util.Log;
-
 import com.havedroid.dddsched.Constants;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Schedule {
+
 	//Session slot json names
 	private static final String JSON_SESSION_SLOT_NAME = "slot_display_name";
 	private static final String JSON_SESSION_ARRAY_NAME = "sessions";
@@ -24,24 +25,24 @@ public class Schedule {
 	private static final String JSON_SESSION_ROOM_NAME = "room";
 	
 	private static List<SessionSlot> mSchedule = null;
-	
-	public static List<SessionSlot> getSchedule(){
-		if(mSchedule == null){
-			loadSchedule();
+
+	public static List<SessionSlot> getSchedule(SharedPreferences preferences, Boolean forceReparse){
+		if(mSchedule == null || forceReparse){
+			String schedule = preferences.getString(Constants.SCHEDULE_KEY, Constants.SCHEDULE);
+            loadSchedule(schedule);
 		}
 		
 		return mSchedule;
 	}
 
-	private static void loadSchedule() {
-		String defaultSchedule = Constants.SCHEDULE;
+	private static void loadSchedule(String schedule) {
 		JSONArray fullSchedule;
 		
 		mSchedule = new ArrayList<SessionSlot>();
 		
 		try {
-			fullSchedule = new JSONArray(defaultSchedule);
-			JSONObject slot = null;
+			fullSchedule = new JSONArray(schedule);
+			JSONObject slot;
 			for(int i = 0; i < fullSchedule.length(); i++){
 				slot = fullSchedule.getJSONObject(i);
 				mSchedule.add(createSessionSlot(slot));
