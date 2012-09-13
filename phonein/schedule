@@ -1,0 +1,27 @@
+[
+    {
+        "slot_display_name": "8:30 - 9:30 - Turles and Welcome",
+        "sessions" :  []
+    },
+    {
+        "slot_display_name": "9:30 - 10:30", 
+        "sessions" :  [
+            {
+                "id" : "1",
+                "title" : "Node.js - let&#39;s look at it",
+                "speaker" : "Rob Ashton",
+                "start_time": "08/10/2011 09:30",
+                "room": "107",
+                "description": "&lt;p&gt;Node is coming to Windows as a native package, we&#39;re all dead excited about it - but.... why?&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Let&#39;s find out in this session why server-side Javascript is so cool, what&#39;s so special about the way it&#39;s been implemented in Node.js, why it&#39;s different to what has come before and what we should be considering using it for.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;There will be an interactive demo (one way or another), a scary amount of Javascript evangelising and probably some WebGL too, as no interactive demo is complete without some 3D action.&lt;/div&gt;&lt;/p&gt;"
+            },
+            {
+                "id" : "2",
+                "title" : "Behaviour Driven Development",
+                "speaker" : "Ian Cooper",
+                "start_time": "08/10/2011 09:30",
+                "room": "108",
+                "description": "&lt;p&gt;&lt;span style=&quot;font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; &quot;&gt;&lt;span&gt;Behavior Driven Development (or BDD) is an Agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. It was originally named in 2003 by Dan North as a response to Test Driven Development (TDD), and to Framework for Integrated Tests concepts, from the Customer Test practice in Extreme Programming. It has evolved over the last few years from a better way of doing TDD, through the inclusion of acceptance-test driven development (ATDD) to a full stack agile methodology. In this presentation we will explain how to do BDD and why its not about tools such as Specflow or Cucumber, but about approach. However, we&#39;ll give you a taste of those tools, once we have explained why you might need them.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;"
+            }
+        ]
+    }
+]
