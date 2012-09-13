@@ -1,12 +1,12 @@
 package com.havedroid.dddsched;
 
+import android.content.Context;
 import android.util.Log;
-
 import com.havedroid.dddsched.data.Session;
 
 public class AttendingSessionsListViewAdapter extends ScheduleListViewAdapter {
 
-	public AttendingSessionsListViewAdapter(ScheduleActivity context,
+	public AttendingSessionsListViewAdapter(Context context,
 			Session[] sessions) {
 		super(context, sessions);
 	}

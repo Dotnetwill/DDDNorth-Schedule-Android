@@ -22,9 +22,7 @@ public class DDDTweetListAdapter extends BaseAdapter {
         this.context = context;
         this.twitter = twitter;
         this.inflater = inflater;
-
         tweets = twitter.getCachedTweets();
-        refresh();
     }
 
     @Override
@@ -69,8 +67,10 @@ public class DDDTweetListAdapter extends BaseAdapter {
     }
 
     private void loadImage(ImageView imageView, String profileImageUrl) {
-        imageView.setTag(profileImageUrl.replace("normal", "bigger"));
-        new AsyncImageViewLoader(context).execute(imageView);
+        profileImageUrl = profileImageUrl.replace("normal", "bigger");
+        imageView.setImageResource(R.drawable.user_placeholder);
+        imageView.setTag(profileImageUrl);
+        new AsyncImageViewLoader(context, imageView).execute(profileImageUrl);
     }
 
     public void refresh() {
@@ -87,7 +87,7 @@ public class DDDTweetListAdapter extends BaseAdapter {
         @Override
         public void onCompleted(List<DDDTweet> newTweets) {
             tweets = newTweets;
-            notifyDataSetInvalidated();
+            notifyDataSetChanged();
         }
     };
 

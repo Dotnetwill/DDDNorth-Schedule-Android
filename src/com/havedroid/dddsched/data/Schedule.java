@@ -26,6 +26,7 @@ public class Schedule {
 	
 	private static List<SessionSlot> mSchedule = null;
 
+    public static String AttendingSessions = null;
 	public static List<SessionSlot> getSchedule(SharedPreferences preferences, Boolean forceReparse){
 		if(mSchedule == null || forceReparse){
 			String schedule = preferences.getString(Constants.SCHEDULE_KEY, Constants.SCHEDULE);

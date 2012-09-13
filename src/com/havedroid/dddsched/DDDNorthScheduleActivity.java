@@ -58,8 +58,9 @@ public class DDDNorthScheduleActivity extends Activity {
         if(tweet != null){
             tweetContent.setText(tweet.content);
             tweetPerson.setText(tweet.user);
-            tweetImage.setTag(tweet.profileImageUrl.replace("normal", "bigger"));
-            new AsyncImageViewLoader(getApplicationContext()).execute(tweetImage);
+            String imageUrl = tweet.profileImageUrl.replace("normal", "bigger");
+            tweetImage.setTag(imageUrl);
+            new AsyncImageViewLoader(getApplicationContext(), tweetImage).execute(imageUrl);
         }
     }
 

@@ -15,151 +15,156 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Session implements Parcelable {
-	private static final int SHORT_DESC_LENGHT = 100;
-	private int mId;
-	private String mTitle = "";
-	private String mDesc = "";
-	private String mRoom = "";
-	private String mSpeaker = "";
-	private String mStartTime = "";
-	
-	public Session() {
-	}
-	
-	private Session(Parcel in) {
-   	 mId = in.readInt();
-   	 mDesc = in.readString();
-   	 mRoom = in.readString();
-   	 mSpeaker = in.readString();
-   	 mStartTime = in.readString();
-   	 mTitle = in.readString();
-	}
-	
-	public int getId() {
-		return mId;
-	}
+    private static final int SHORT_DESC_LENGHT = 100;
+    private int mId;
+    private String mTitle = "";
+    private String mDesc = "";
+    private String mRoom = "";
+    private String mSpeaker = "";
+    private String mStartTime = "";
 
-	public void setId(int mId) {
-		this.mId = mId;
-	}
+    public Session() {
+    }
 
-	public String getTitle() {
-		return Html.fromHtml(mTitle).toString();
-	}
+    private Session(Parcel in) {
+        mId = in.readInt();
+        mDesc = in.readString();
+        mRoom = in.readString();
+        mSpeaker = in.readString();
+        mStartTime = in.readString();
+        mTitle = in.readString();
+    }
 
-	public void setTitle(String title) {
-		this.mTitle = title;
-	}
+    public int getId() {
+        return mId;
+    }
 
-	public String getDesc() {
-		return Html.fromHtml(mDesc).toString();
-	}
+    public void setId(int mId) {
+        this.mId = mId;
+    }
 
-	public void setDesc(String desc) {
-		this.mDesc = desc;
-	}
+    public String getTitle() {
+        return Html.fromHtml(mTitle).toString();
+    }
 
-	public String getRoom() {
-		return mRoom;
-	}
+    public void setTitle(String title) {
+        this.mTitle = title;
+    }
 
-	public void setRoom(String room) {
-		this.mRoom = room;
-	}
+    public String getDesc() {
+        return Html.fromHtml(mDesc).toString();
+    }
 
-	public String getSpeaker() {
-		return mSpeaker;
-	}
+    public void setDesc(String desc) {
+        this.mDesc = desc;
+    }
 
-	public void setSpeaker(String speaker) {
-		this.mSpeaker = speaker;
-	}
-	
-	public Date getStartTime() {
-		try {
-			DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-			return sdf.parse(mStartTime);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return new Date();
-		}
-	}
-	
-	public void setStartTime(String startTime) {
-		this.mStartTime = startTime;
-	}
-	
-	public String getShortDescription(){
-		String noHTMLString = getDesc().replaceAll("\\<.*?\\>", "");
-		
-		if(noHTMLString.length() > SHORT_DESC_LENGHT){
-			return noHTMLString.substring(0, SHORT_DESC_LENGHT) + "...";
-		}
-		
-		return noHTMLString;
-	}
-	
-	public Boolean getAttending(Context context) {
-		SharedPreferences preferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-		String attendingSessions = preferences.getString("sessionsAttending", "");
-		Log.d(Constants.LOG_TAG, "Attending sessions string: " + attendingSessions);
-		
-		String idString =String.valueOf(mId);
-		Log.d(Constants.LOG_TAG, "session id string: " + idString);
-		
-		for(String id : attendingSessions.split(",")){
-			if(idString.equals(id)){
-				
-				return true;
-			}
-		}
-		
-		return false;
-	}
+    public String getRoom() {
+        return mRoom;
+    }
 
-	public void setAttending(Context context, Boolean attending) {
-		if(getAttending(context) == attending){
-			return;
-		}
-		
-		SharedPreferences preferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-		String attendingSessions = preferences.getString("sessionsAttending", "");
-		
-		if(attending){
-			attendingSessions += "," + String.valueOf(mId);
-		}else{
-			attendingSessions = attendingSessions.replace("," + String.valueOf(mId), "");
-		}
-		Editor editor = preferences.edit();
-		editor.putString("sessionsAttending", attendingSessions);
-		editor.commit();
-	}
+    public void setRoom(String room) {
+        this.mRoom = room;
+    }
 
-	 public void writeToParcel(Parcel out, int flags) {
-         out.writeInt(mId);
-         out.writeString(mDesc);
-         out.writeString(mRoom);
-         out.writeString(mSpeaker);
-         out.writeString(mStartTime);
-         out.writeString(mTitle);
-     }
+    public String getSpeaker() {
+        return mSpeaker;
+    }
 
-     public static final Parcelable.Creator<Session> CREATOR
-             = new Parcelable.Creator<Session>() {
-         public Session createFromParcel(Parcel in) {
-             return new Session(in);
-         }
+    public void setSpeaker(String speaker) {
+        this.mSpeaker = speaker;
+    }
 
-         public Session[] newArray(int size) {
-             return new Session[size];
-         }
-     };
-     
+    public Date getStartTime() {
+        try {
+            DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            return sdf.parse(mStartTime);
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return new Date();
+        }
+    }
+
+    public void setStartTime(String startTime) {
+        this.mStartTime = startTime;
+    }
+
+    public String getShortDescription() {
+        String noHTMLString = getDesc().replaceAll("\\<.*?\\>", "");
+
+        if (noHTMLString.length() > SHORT_DESC_LENGHT) {
+            return noHTMLString.substring(0, SHORT_DESC_LENGHT) + "...";
+        }
+
+        return noHTMLString;
+    }
+
+    public Boolean getAttending(Context context) {
+        if(Schedule.AttendingSessions == null){
+            SharedPreferences preferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+            Schedule.AttendingSessions = preferences.getString("sessionsAttending", "");
+        }
+
+        String attendingSessions = Schedule.AttendingSessions;
+        if (attendingSessions != "") {
+
+            Log.d(Constants.LOG_TAG, "Attending sessions string: " + attendingSessions);
+
+            String idString = String.valueOf(mId);
+            Log.d(Constants.LOG_TAG, "session id string: " + idString);
+
+            for (String id : attendingSessions.split(",")) {
+                if (idString.equals(id)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void setAttending(Context context, Boolean attending) {
+        if (getAttending(context) == attending) {
+            return;
+        }
+
+        SharedPreferences preferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+        String attendingSessions = preferences.getString("sessionsAttending", "");
+
+        if (attending) {
+            attendingSessions += "," + String.valueOf(mId);
+        } else {
+            attendingSessions = attendingSessions.replace("," + String.valueOf(mId), "");
+        }
+        Editor editor = preferences.edit();
+        editor.putString("sessionsAttending", attendingSessions);
+        editor.commit();
+        Schedule.AttendingSessions = attendingSessions;
+    }
+
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeInt(mId);
+        out.writeString(mDesc);
+        out.writeString(mRoom);
+        out.writeString(mSpeaker);
+        out.writeString(mStartTime);
+        out.writeString(mTitle);
+    }
+
+    public static final Parcelable.Creator<Session> CREATOR
+            = new Parcelable.Creator<Session>() {
+        public Session createFromParcel(Parcel in) {
+            return new Session(in);
+        }
+
+        public Session[] newArray(int size) {
+            return new Session[size];
+        }
+    };
 
 
-	public int describeContents() {
-		
-		return 0;
-	}
+    public int describeContents() {
+
+        return 0;
+    }
 }

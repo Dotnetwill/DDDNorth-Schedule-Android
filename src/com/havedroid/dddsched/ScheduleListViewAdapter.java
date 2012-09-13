@@ -16,7 +16,7 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 	protected Context mContext;
 	protected Session[] mSessions;
 	
-	public ScheduleListViewAdapter(ScheduleActivity context, Session[] sessions) {
+	public ScheduleListViewAdapter(Context context, Session[] sessions) {
 		mContext = context;
 		mSessions = sessions;
 	}
