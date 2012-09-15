@@ -36,7 +36,8 @@
 	    android:textColor="#652d90"
 	    android:gravity="center_horizontal" 
 	    android:textStyle="bold" 
-	    android:textSize="20dp"/>
+	    android:textSize="20dp"
+        android:paddingBottom="5dp"/>
 	<TextView
 		android:id="@+id/next_session_title"
 		android:textStyle="bold" 
@@ -53,7 +54,8 @@
     <RelativeLayout android:layout_height="wrap_content" 
     				android:layout_width="wrap_content" 
     				android:layout_gravity="center"
-                    android:id="@+id/buttonLayout">
+                    android:id="@+id/buttonLayout"
+                    android:gravity="center_vertical|center_horizontal">
 	    <Button
 	        android:id="@+id/ShowSchedule"
 	        android:text="Schedule"
@@ -62,15 +64,23 @@
 	        android:layout_margin="10dp"
 	        android:layout_gravity="left"
 	        />
-	    <Button
-	        android:id="@+id/TweetStream"
-	        android:text="Tweets"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_margin="10dp"
-	        android:layout_gravity="right"
-	        android:layout_toRightOf="@id/ShowSchedule"/>
 	</RelativeLayout>
-    <include layout="@layout/dddtweet" />
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:orientation="vertical"
+                  android:padding="20dp">
+        <TextView
+                android:id="@+id/latestLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Latest From Twitter"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#652d90"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:paddingBottom="5dp"/>
+        <include layout="@layout/dddtweet" android:layout_gravity="center_horizontal" android:layout_centerInParent="true" />
+    </LinearLayout>
 
 </LinearLayout>

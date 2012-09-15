@@ -17,6 +17,7 @@ public class DDDTweetListAdapter extends BaseAdapter {
     private final DDDNorthTwitter twitter;
     private final LayoutInflater inflater;
     private List<DDDTweet> tweets;
+    private OnRefreshComplete onRefreshComplete;
 
     public DDDTweetListAdapter(Context context, DDDNorthTwitter twitter, LayoutInflater inflater) {
         this.context = context;
@@ -73,7 +74,8 @@ public class DDDTweetListAdapter extends BaseAdapter {
         new AsyncImageViewLoader(context, imageView).execute(profileImageUrl);
     }
 
-    public void refresh() {
+    public void refresh(OnRefreshComplete onRefreshComplete) {
+        this.onRefreshComplete = onRefreshComplete;
         new AsyncTwitterUpdate(updateComplete).execute(twitter);
     }
 
@@ -88,7 +90,13 @@ public class DDDTweetListAdapter extends BaseAdapter {
         public void onCompleted(List<DDDTweet> newTweets) {
             tweets = newTweets;
             notifyDataSetChanged();
+            if(onRefreshComplete != null){
+                onRefreshComplete.onRefreshComplete();
+            }
         }
     };
 
+    public static interface OnRefreshComplete{
+        void onRefreshComplete();
+    }
 }

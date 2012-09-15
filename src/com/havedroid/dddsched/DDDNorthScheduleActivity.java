@@ -28,7 +28,7 @@ public class DDDNorthScheduleActivity extends Activity {
     private TextView tweetPerson;
     private ImageView tweetImage;
     private TextView tweetContent;
-
+    private TextView latestTweetLabel;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +45,7 @@ public class DDDNorthScheduleActivity extends Activity {
         tweetContent = (TextView)findViewById(R.id.Detail_TweetContent);
         tweetImage = (ImageView)findViewById(R.id.Twitterer_Pic);
         tweetPerson = (TextView)findViewById(R.id.Tweet_Twitterer);
+        latestTweetLabel = (TextView)findViewById(R.id.latestLabel);
 
         mTwitter = new DDDNorthTwitter(getApplicationContext());
 
@@ -56,11 +57,22 @@ public class DDDNorthScheduleActivity extends Activity {
     private void loadHaloTweet() {
         DDDTweet tweet = mTwitter.getHaloTweet();
         if(tweet != null){
+            tweetContent.setVisibility(View.VISIBLE);
+            tweetPerson.setVisibility(View.VISIBLE);
+            tweetImage.setVisibility(View.VISIBLE);
+            latestTweetLabel.setVisibility(View.VISIBLE);
+
             tweetContent.setText(tweet.content);
             tweetPerson.setText(tweet.user);
             String imageUrl = tweet.profileImageUrl.replace("normal", "bigger");
             tweetImage.setTag(imageUrl);
+            tweetImage.setImageResource(R.drawable.user_placeholder);
             new AsyncImageViewLoader(getApplicationContext(), tweetImage).execute(imageUrl);
+        }else{
+            tweetContent.setVisibility(View.INVISIBLE);
+            tweetPerson.setVisibility(View.INVISIBLE);
+            tweetImage.setVisibility(View.INVISIBLE);
+            latestTweetLabel.setVisibility(View.INVISIBLE);
         }
     }
 

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.DataSetObserver;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -14,6 +15,7 @@ import com.havedroid.dddsched.Util.DDDNorthTwitter;
 import com.havedroid.dddsched.Util.UpdateSchedule;
 import com.havedroid.dddsched.data.Schedule;
 import com.havedroid.dddsched.data.SessionSlot;
+import com.markupartist.android.widget.PullToRefreshListView;
 
 public class ScheduleActivity extends TabActivity {
 
@@ -24,7 +26,7 @@ public class ScheduleActivity extends TabActivity {
     private SectionedListAdapter mAllAdapter;
     private SectionedListAdapter mMySessionsAdapter;
     private DDDTweetListAdapter mTweetListAdapter;
-    private ListView tweetListView;
+    private PullToRefreshListView tweetListView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class ScheduleActivity extends TabActivity {
         mMySessionsAdapter.notifyAllDatasetChanges();
 
         if(!reload){
-            tweetListView = (ListView) findViewById(R.id.DDDTweetsView);
+            tweetListView = (PullToRefreshListView)findViewById(R.id.DDDTweetsView);
             tweetListView.setAdapter(getTweetAdapater());
         }
     }
@@ -117,7 +119,7 @@ public class ScheduleActivity extends TabActivity {
                 }
             } else {
                 if (mTweetListAdapter != null) {
-                    mTweetListAdapter.refresh();
+                    mTweetListAdapter.refresh(notifyPullListViewFinished);
                 }
             }
         }
@@ -148,6 +150,22 @@ public class ScheduleActivity extends TabActivity {
     private Iterable<SessionSlot> getSessionSlots() {
         return Schedule.getSchedule(getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE), true);
     }
+
+    private PullToRefreshListView.OnRefreshListener refreshListener = new PullToRefreshListView.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            mTweetListAdapter.refresh(notifyPullListViewFinished);
+        }
+    };
+
+    private DDDTweetListAdapter.OnRefreshComplete notifyPullListViewFinished = new DDDTweetListAdapter.OnRefreshComplete() {
+        @Override
+        public void onRefreshComplete() {
+            Time now = new Time();
+            now.setToNow();
+            tweetListView.onRefreshComplete(now.format("HH:mm:ss dd/MM"));
+        }
+    };
 
     private AsyncTask<Object, Object, Boolean> updateSessionList = new AsyncTask<Object, Object, Boolean>() {
 
