@@ -1,0 +1,6 @@
+out/
+.idea
+.DS_Store
+gen
+
+DDDNorth-Schedule-Android.iml
