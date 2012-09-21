@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.DataSetObserver;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.format.Time;
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -16,6 +15,9 @@ import com.havedroid.dddsched.Util.UpdateSchedule;
 import com.havedroid.dddsched.data.Schedule;
 import com.havedroid.dddsched.data.SessionSlot;
 import com.markupartist.android.widget.PullToRefreshListView;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class ScheduleActivity extends TabActivity {
 
@@ -52,6 +54,7 @@ public class ScheduleActivity extends TabActivity {
 
         if(!reload){
             tweetListView = (PullToRefreshListView)findViewById(R.id.DDDTweetsView);
+            tweetListView.setOnRefreshListener(refreshListener);
             tweetListView.setAdapter(getTweetAdapater());
         }
     }
@@ -70,8 +73,13 @@ public class ScheduleActivity extends TabActivity {
     private DataSetObserver twitterUpdated = new DataSetObserver() {
         @Override
         public void onChanged() {
+
+            Log.d(Constants.LOG_TAG, "Refresh complete");
+            Date cal = Calendar.getInstance().getTime();
+            tweetListView.onRefreshComplete(cal.toLocaleString());
+
             tweetListView.scrollTo(0,0);
-            Toast.makeText(getApplicationContext(), "New Tweets!", 30);
+            Toast.makeText(getApplicationContext(), "New Tweets!", Toast.LENGTH_LONG);
         }
     };
 
@@ -161,9 +169,10 @@ public class ScheduleActivity extends TabActivity {
     private DDDTweetListAdapter.OnRefreshComplete notifyPullListViewFinished = new DDDTweetListAdapter.OnRefreshComplete() {
         @Override
         public void onRefreshComplete() {
-            Time now = new Time();
-            now.setToNow();
-            tweetListView.onRefreshComplete(now.format("HH:mm:ss dd/MM"));
+             Log.d(Constants.LOG_TAG, "Refresh complete");
+             Date cal = Calendar.getInstance().getTime();
+             tweetListView.onRefreshComplete(cal.toLocaleString());
+
         }
     };
 
@@ -179,7 +188,7 @@ public class ScheduleActivity extends TabActivity {
             if (success) {
                 setupListAdapters(true);
                 Log.v(Constants.LOG_TAG, "Reloaded list adapters");
-                Toast.makeText(getApplicationContext(), "Schedule Updated!", 20);
+                Toast.makeText(getApplicationContext(), "Schedule Updated!", Toast.LENGTH_LONG);
             }
         }
     };

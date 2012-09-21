@@ -29,6 +29,7 @@ public class DDDNorthScheduleActivity extends Activity {
     private ImageView tweetImage;
     private TextView tweetContent;
     private TextView latestTweetLabel;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

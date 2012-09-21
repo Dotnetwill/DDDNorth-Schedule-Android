@@ -21,10 +21,7 @@ public class AsyncTwitterUpdate extends AsyncTask<DDDNorthTwitter, String, List<
 
     @Override
     protected void onPostExecute(List<DDDTweet> tweets){
-        if(tweets != null){
             completeHandler.onCompleted(tweets);
-        }
-
     }
 
 

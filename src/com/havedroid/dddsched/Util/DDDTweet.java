@@ -11,8 +11,6 @@ public class DDDTweet implements Serializable {
     public Date createdAt;
     public long id;
 
-    public DDDTweet(){}
-
     public DDDTweet(String user, String content, String profileImageUrl, Date createdAt, long id){
         this.user = user;
         this.content = content;

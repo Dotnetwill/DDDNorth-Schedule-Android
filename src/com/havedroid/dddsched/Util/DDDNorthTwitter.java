@@ -34,67 +34,45 @@ public class DDDNorthTwitter {
 
     public DDDTweet getHaloTweet(){
         loadTweets();
-        if(tweets != null && tweets.size() > 0){
-            Long lastId = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE).getLong(LAST_HALO_ID_PREF, 0);
-            if(tweets.get(0).id > lastId){
-                DDDTweet tweet = tweets.get(0);
-                updateHaloCircle(tweet);
-                return tweet;
-            }else{
-                DDDTweet tweet = findTweetById(lastId);
-                if(tweet == null){
-                    tweet = getTweetFromCircle();
-                    //if we still haven't found one to use
-                    if(tweet == null){
-                        for(DDDTweet haloTweet : tweets){
-                            if(haloTweet.id == lastId) continue;
-                            tweet = haloTweet;
-                            break;
-                        }
-                    }
-                }
-                updateHaloCircle(tweet);
-                return tweet;
+
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+        Long lastId = sharedPreferences.getLong(LAST_HALO_ID_PREF, 0);
+        String circleIds = sharedPreferences.getString(TWEET_ID_CIRCLE_PREF_KEY, "");
+
+        DDDTweet displayTweet = null;
+        final int count  = tweets.size() -1;
+        for(int i = count; i >= 0; i--){
+            DDDTweet tweet = tweets.get(i);
+            if(tweet.id == lastId) continue;
+            //Anything that hasn't been in the circle display
+            if(!circleIds.contains(String.valueOf(tweet.id) + ",")){
+                displayTweet = tweet;
+                circleIds = circleIds + String.valueOf(tweet.id) + ",";
+                break;
+            }
+            //The idea here is that tweet ids go up and up and we store the last id we seen
+            //so we append the id of every tweet to the circle id list then wrap round when we reach the end.
+            //When we wrap we end up with a low tweet ID and all the others are higher so we step through.
+            //Make sense? Probably not I'm shit with English
+            if(tweet.id > lastId){
+                displayTweet = tweet;
+                break;
             }
         }
-        return null;
-    }
 
-    private DDDTweet getTweetFromCircle(){
-        String circleIds = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE)
-                .getString(TWEET_ID_CIRCLE_PREF_KEY, "");
-
-        for(DDDTweet storedTweet : tweets){
-            if(!circleIds.contains(storedTweet.id + ",")){
-                return storedTweet;
-            }
+        if(displayTweet == null && tweets.size() > 0){
+            displayTweet = tweets.get(0);
         }
-        return null;
-    }
 
-    private void updateHaloCircle(DDDTweet tweet) {
-        if(tweet == null) return;
-
-        SharedPreferences prefs = context.getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-        String circleIds = prefs.getString(TWEET_ID_CIRCLE_PREF_KEY, "");
-
-        if(circleIds.contains(tweet.id + ",")){
-           circleIds = circleIds.replace(tweet.id + ",", "");
+        if(displayTweet != null){
+            lastId = displayTweet.id;
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(TWEET_ID_CIRCLE_PREF_KEY, circleIds);
+            editor.putLong(LAST_HALO_ID_PREF, lastId);
+            editor.commit();
         }
-        circleIds = tweet.id + "," + circleIds;
 
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(TWEET_ID_CIRCLE_PREF_KEY, circleIds);
-        editor.putLong(LAST_HALO_ID_PREF, tweet.id);
-        editor.commit();
-    }
-
-    private DDDTweet findTweetById(Long lastId) {
-        for(DDDTweet tweet : tweets){
-            if(tweet.id > lastId)
-                return tweet;
-        }
-        return null;
+        return displayTweet;
     }
 
     private void loadTweets() {

@@ -1,6 +1,7 @@
 package com.havedroid.dddsched;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,6 +76,7 @@ public class DDDTweetListAdapter extends BaseAdapter {
     }
 
     public void refresh(OnRefreshComplete onRefreshComplete) {
+        Log.d(Constants.LOG_TAG, "Refresh of twitter requested");
         this.onRefreshComplete = onRefreshComplete;
         new AsyncTwitterUpdate(updateComplete).execute(twitter);
     }
@@ -88,15 +90,21 @@ public class DDDTweetListAdapter extends BaseAdapter {
     private TwitterUpdateComplete updateComplete = new TwitterUpdateComplete() {
         @Override
         public void onCompleted(List<DDDTweet> newTweets) {
-            tweets = newTweets;
-            notifyDataSetChanged();
-            if(onRefreshComplete != null){
+            if (tweets != null) {
+                tweets = newTweets;
+                notifyDataSetChanged();
+            }
+
+            if (onRefreshComplete != null) {
+                Log.d(Constants.LOG_TAG, "Twitter updated, calling onRefresh");
                 onRefreshComplete.onRefreshComplete();
+            } else {
+                Log.d(Constants.LOG_TAG, "Twitter updated, no onRefresh to handle");
             }
         }
     };
 
-    public static interface OnRefreshComplete{
+    public static interface OnRefreshComplete {
         void onRefreshComplete();
     }
 }
