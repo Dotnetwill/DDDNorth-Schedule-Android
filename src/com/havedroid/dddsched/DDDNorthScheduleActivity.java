@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.util.Linkify;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -62,6 +63,7 @@ public class DDDNorthScheduleActivity extends Activity {
             latestTweetLabel.setVisibility(View.VISIBLE);
 
             tweetContent.setText(tweet.content);
+            Linkify.addLinks(tweetContent, Linkify.WEB_URLS);
             tweetPerson.setText(tweet.user);
             String imageUrl = tweet.profileImageUrl.replace("normal", "bigger");
             tweetImage.setTag(imageUrl);

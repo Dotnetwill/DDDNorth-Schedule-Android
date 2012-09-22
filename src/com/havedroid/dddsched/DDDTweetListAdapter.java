@@ -1,6 +1,7 @@
 package com.havedroid.dddsched;
 
 import android.content.Context;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,6 +64,7 @@ public class DDDTweetListAdapter extends BaseAdapter {
         DDDTweet tweet = tweets.get(i);
         loadImage(holder.ImageView, tweet.profileImageUrl);
         holder.Content.setText(tweet.content);
+        Linkify.addLinks(holder.Content, Linkify.WEB_URLS);
         holder.Tweeterer.setText(tweet.user);
 
         return view;
