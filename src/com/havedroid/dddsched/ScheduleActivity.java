@@ -156,7 +156,7 @@ public class ScheduleActivity extends TabActivity {
     }
 
     private Iterable<SessionSlot> getSessionSlots() {
-        return Schedule.getSchedule(getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE), true);
+        return Schedule.getSchedule(getApplicationContext(), true);
     }
 
     private PullToRefreshListView.OnRefreshListener refreshListener = new PullToRefreshListView.OnRefreshListener() {

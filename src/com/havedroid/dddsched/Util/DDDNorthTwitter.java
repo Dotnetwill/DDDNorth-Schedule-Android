@@ -41,6 +41,13 @@ public class DDDNorthTwitter {
 
         DDDTweet displayTweet = null;
         final int count  = tweets.size() -1;
+        int startAt = 10;
+
+        //Only loop though the last 10
+        if(count > 10){
+            startAt = count - 10;
+        }
+
         for(int i = count; i >= 0; i--){
             DDDTweet tweet = tweets.get(i);
             if(tweet.id == lastId) continue;

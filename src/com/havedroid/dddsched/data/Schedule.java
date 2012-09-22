@@ -1,12 +1,17 @@
 package com.havedroid.dddsched.data;
 
-import android.content.SharedPreferences;
+import android.content.Context;
+import android.content.res.Resources;
 import android.util.Log;
 import com.havedroid.dddsched.Constants;
+import com.havedroid.dddsched.R;
+import com.havedroid.dddsched.Util.DDDPreferences;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,16 +32,34 @@ public class Schedule {
 	private static List<SessionSlot> mSchedule = null;
 
     public static String AttendingSessions = null;
-	public static List<SessionSlot> getSchedule(SharedPreferences preferences, Boolean forceReparse){
+	public static List<SessionSlot> getSchedule(Context context, Boolean forceReparse){
 		if(mSchedule == null || forceReparse){
-			String schedule = preferences.getString(Constants.SCHEDULE_KEY, Constants.SCHEDULE);
+			String schedule = DDDPreferences.getSharedPreferences(context).getString(Constants.SCHEDULE_KEY, "");
+            if(schedule == ""){
+                schedule = loadFromRes(context);
+            }
             loadSchedule(schedule);
 		}
 		
 		return mSchedule;
 	}
 
-	private static void loadSchedule(String schedule) {
+    private static String loadFromRes(Context context) {
+        try{
+            Resources res = context.getResources();
+            InputStream in_s = res.openRawResource(R.raw.schedule);
+
+            byte[] b = new byte[in_s.available()];
+
+            in_s.read(b);
+            return new String(b);
+        } catch (IOException e) {
+            Log.e(Constants.LOG_TAG, "Unable to open schedule", e);
+        }
+        return "";
+    }
+
+    private static void loadSchedule(String schedule) {
 		JSONArray fullSchedule;
 		
 		mSchedule = new ArrayList<SessionSlot>();

@@ -35,9 +35,7 @@ public class DDDNorthScheduleActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         mContext = getApplicationContext();
-        
-        SetupAppContants();
-        
+
         mSessionTitle = (TextView)findViewById(R.id.next_session_title);
 		mShortInfo = (TextView)findViewById(R.id.next_session_short_info);
 		mShowSchedule = (Button)findViewById(R.id.ShowSchedule);
@@ -77,11 +75,6 @@ public class DDDNorthScheduleActivity extends Activity {
         }
     }
 
-    private void SetupAppContants() {
-		//this is terrible I know but it's quick and easy and I'm in a pragmatic mood
-		Constants.SCHEDULE = mContext.getString(R.string.schedule);
-	}
-
 	@Override
 	public void onResume(){
 		super.onResume();
@@ -105,7 +98,7 @@ public class DDDNorthScheduleActivity extends Activity {
     	Session nextSession = null; 
     	
     	long timeToNextSession;
-    	for(SessionSlot slot : Schedule.getSchedule(getSharedPreferences(Constants.SHARED_PREFS_KEY, Context.MODE_PRIVATE), true)){
+    	for(SessionSlot slot : Schedule.getSchedule(getApplicationContext(), true)){
     		for(Session session : slot.getSessions()){
     			if(session.getAttending(mContext)){
     				timeToNextSession = getUtcDifferenceToDate(session.getStartTime());
@@ -140,7 +133,9 @@ public class DDDNorthScheduleActivity extends Activity {
     private TwitterUpdateComplete twitterUpdated = new TwitterUpdateComplete() {
         @Override
         public void onCompleted(List<DDDTweet> tweets) {
-            loadHaloTweet();
+            //Only update if we have new tweets
+            if(tweets != null && tweets.size() > 0)
+                loadHaloTweet();
         }
     };
 

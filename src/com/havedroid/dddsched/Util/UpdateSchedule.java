@@ -54,7 +54,7 @@ public class UpdateSchedule {
 
     private static UpdateAvailableResult updateAvailable(SharedPreferences preferences) {
         int versionOnServer = getVersionNumberAvailable();
-        int curVersion = preferences.getInt(Constants.VERSION_PREF_KEY, 0);
+        int curVersion = preferences.getInt(Constants.VERSION_PREF_KEY, 10);
         Log.v(Constants.LOG_TAG, "Current schedule version: " + curVersion);
         Boolean newerVersion = versionOnServer > curVersion;
         return new UpdateAvailableResult(newerVersion, versionOnServer);

@@ -1,0 +1,251 @@
+[
+  {
+    "slot_display_name": "8:30 - 9:30 - Registration and Housekeeping",
+    "sessions": []
+  },
+  {
+    "slot_display_name": "09:30 - 10:30\n",
+    "sessions": [
+      {
+        "id": 50,
+        "title": "TBC",
+        "speaker": "TBC",
+        "start_time": "13/10/2012 09:30",
+        "room": "Room 1",
+        "description": "TBC"
+      },
+      {
+        "id": 51,
+        "title": "10 practices that make me the developer I am today",
+        "speaker": "Garry Shutler",
+        "start_time": "13/10/2012 09:30",
+        "room": "Room 2",
+        "description": " <p><div>I've tried pretty much every fad that's cropped up during my career. I'm willing to give pretty much anything a fair go to see if they live up to the hype. Most are nonsense, some are awesome, and usually those guys that were doing it 20 years before us knew what they were doing.</div><div><br></div><span>Come with me as I trace through my career from junior noob to senior developer. I'll cover the core practices I've picked up along the way that I use every day, why I value them, and why you should value them if you don't already.</span><div><br></div><div>I'll cover the habits that I think make a real difference to your day-to-day work and some new practices that I'm come across that you may want to try.</div></p>"
+      },
+      {
+        "id": 52,
+        "title": "The good, the bad and the automated",
+        "speaker": "Paul Stack",
+        "start_time": "13/10/2012 09:30",
+        "room": "Room 3",
+        "description": " <p><div>A bad deployment process can not only cost our applications downtime but cn also cause developers a lot of stress and irritation. The deployment of an application should be easier than we currently make it. Technically speaking, you should be able to release your application whilst sipping a cocktail on a mediterranean beach. This, of course, isnt the case for a lot of projects. In traditional waterfall methodology, deployment wasnt thought about until just before it happened, this caused issues on deployment night. As software developers, we should practice the art of delivering software not just developing it.</div><div><br></div><div>In this session, Paul will look at the pitfalls that developers can face when trying to delivery the software they have worked hard to develop. Paul will demonstrate that continuous delivery is a great way to face these pitfalls and that it should form a solid part in the application development lifecycle. Paul will show that devops isnt just a fancy job title and will discuss effective deployment techniques that everyone in a development team can become responsible for.</div><div><br></div><div>On leaving this session, developers should take away the belief that delivery should not be stressful and that it should be as easy as clicking a magic button at any time, anywhere.</div><div><br></div><div>Outline:</div><div>- Discuss the common pitfalls developers face</div><div>- Introduce the concept of continuous delivery as a mechanism to cure these pitfalls</div><div>- Look at effective deployment techniques that the entire team can take ownership of</div><div>- Give reasoned arguments as to why continuous delivery is a great way to deliver software, regardless of the block in place to it.</div></p>\n"
+      },
+      {
+        "id": 53,
+        "title": "So Just What is Spatial SQL?",
+        "speaker": "Peter Shaw",
+        "start_time": "13/10/2012 09:30",
+        "room": "Room 4",
+        "description": "            <p><span>Maps and Geo-location are everywhere these days, but just how many of you still take that Latitude &amp; Longitude you get from your mobile app and put the values into normal decimal columns in your database?<div><br></div><div>With Geo-Spatial SQL and a correctly configured spatial aware database you can take control of this data and do some very clever stuff with it.</div><div><br></div><div>Want to know how many of your customers live within a 10 mile radius of your office?</div><div><br></div><div>What about which is the nearest fast food restaurant to the person currently looking at your Facebook app?</div><div><br></div><div>or maybe you want to track where your delivery drivers are?</div><div><br></div><div>Spatial SQL can provide the answers to this and many other location and distribution based questions, and can produce some very interesting statistics for graphing &amp; charting and market analysis.</div><div><br></div><div>In this session I'll introduce you to the concept of spatial SQL using Open Geo-consortium standards, most of which can be used with slight modification in the current versions of MS-SQL 2008 and up.</div><div><br></div><div>I'll give a high level overview to what is available, why you might want to use it and the type of operations that can be performed directly in your database along with some of the tools you can use to provide rich mapping and statistical visualisation in your .NET applications.</div><div><br></div><div></div></span><div><br></div></p>\n"
+      },
+      {
+        "id": 54,
+        "title": "Successfully Adopting the Cloud with Windows Azure, CRM and SilverLight",
+        "speaker": "Steve Spencer\n",
+        "start_time": "13/10/2012 09:30",
+        "room": "Room 5",
+        "description": "            <p>\n<BODY><SPAN style=\"LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt\">Windows Azure has provided an accessible platform to deliver hybrid solutions for customers. Black Marble has developed a solution that integrates Silverlight, CRM and Windows Azure. This talk will go through the development of the solution and discuss the reasons for choosing the technologies, some of the issues that arose and how it fit with the Black Marble development model.</SPAN></BODY></p>\n"
+      }
+    ]
+  },
+  {
+    "slot_display_name": "10:30 - 10:45 - Break",
+    "sessions": []
+  },
+  {
+    "slot_display_name": "10:45 - 11:45",
+    "sessions": [
+      {
+        "id": 55,
+        "title": "Async C# 5.0 - patterns for real world use",
+        "speaker": "Liam Westley\n",
+        "start_time": "13/10/2012 10:45",
+        "room": "Room 1",
+        "description": "<p><BODY>The new Async features come along with the very useful WhenAll and WhenAny methods to execute sets of tasks.<BR><BR>We will delve into how these work, the effect of exceptions within any individual task and cancellation. This leads to the creation of common patterns such as Redundancy, Interleaving, Throttling and Early Bailout.<BR><BR>Given time we'll also get to peek at progress reporting, something that provides the feedback to add further sophistication to these common patterns.<BR><BR>Expect overviews of the patterns, followed by lots of code samples so get the latest Visual Studio 2012 RC installed ready for action.</BODY></p>\n"
+      },
+      {
+        "id": 56,
+        "title": "Rewriting software is the single worst mistake you can make  One year on!",
+        "speaker": "Phil Collins\n",
+        "start_time": "13/10/2012 10:45",
+        "room": "Room 2",
+        "description": " \n <p><p class=\"p1\"></p><span><p class=\"p1\">Joel Spolsky once said that rewriting software from scratch is the single worst strategic mistake a software development company can ever make.[1] We all know of the Netscape story and the never-released v5.0. So as a developer how do you react when you're faced with the fact that there is little other choice than do exactly what you're told you should never do.</p> <p class=\"p1\">During this session I will describe how as a team we are managing to beat the odds and rewrite our main flagship product from a legacy platform into VB.net; as well as describing the decisions behind the choice of language, the choice of development methodology, how we built the project plan, what has changed since we started, how the plan and we have adapted, how we learnt from our mistakes and our successes, how working with Bournemouth University and their study of our rewrite has helped us, and whether or not we still think it's something you should never do.</p> <p class=\"p1\">Almost one year on since I last spoke about this project and two years into the rewrite project as a whole it's time to bring everyone uptodate with how it's going and what's changed over the past year.<br>  <br> [1] Joel Spolsky, Things You Should Never Do, Part I - <a href=\"http://www.joelonsoftware.com/articles/fog0000000069.html\">http://www.joelonsoftware.com/articles/fog0000000069.html</a></p></span><p class=\"p1\"><a href=\"http://www.joelonsoftware.com/articles/fog0000000069.html\"></a></p></p>\n"
+      },
+      {
+        "id": 57,
+        "title": "Lions and tigers and hackers! Oh my!",
+        "speaker": "Phil Winstanley",
+        "start_time": "13/10/2012 10:45",
+        "room": "Room 3",
+        "description": " \n <p>In recent months there has been massive media focus on the Stuxnet and Flame Cyber weapons, malware is an increasing issue and industrial espionage is occurring every day throughout the UK against companies like yours, and you probably don't even know it's happening.<br><br>In this fun, relaxed yet terrifying session we'll explore the cyber landscape, the reality that we're now facing and what you can realistically do about it. <br></p>\n"
+      },
+      {
+        "id": 58,
+        "title": "Test All Thing Things or Maybe Not: A Pragmatists Experience",
+        "speaker": "Will Charles",
+        "start_time": "13/10/2012 10:45",
+        "room": "Room 4",
+        "description": "<p><div></div><span><div>I love automated tests for my code because I hate manually testing code. But over time I've found that a difficult to maintain test suite is even worse to maintain than retesting my app by hand when I make changes.</div><div><br></div><div>In this session I will talk about what things have made test suites difficult for me to maintain and how it can be mitigated.  We'll briefly look at creating unit tests when working with legacy code and talk about why it doesn't matter what _DD you're using so long as it's providing value to you and your apps.</div><div><br></div><div>Let's get rid of the dogmatism and start looking at how we can use this!</div><div></div></span><div><br></div></p>\n\n"
+      },
+      {
+        "id": 59,
+        "title": "Riting Roslyn Refactorings: Harnessing The Compiler As A Service",
+        "speaker": "Guy Smith-Ferrier\n",
+        "start_time": "13/10/2012 10:45",
+        "room": "Room 5",
+        "description": "            <p>\n<BODY>The .NET Framework 5.0 (or later) is expected to include the much anticipated Compiler As A Service feature (code named Roslyn). Since the .NET Framework 1.0 the compiler has been written in unmanaged C++. With the release of Roslyn it is written in C#. This means it is simply an assembly of .NET types wrapped up in a Console Application. And heres the all-important part  the types are public. You can use the same types that the compiler uses in your own applications. You can compile code on the fly. Effectively you can turn any .NET language into a scripting language. This session shows a preview of what the support will look like in the .NET Framework 5.0 and focuses on practical examples focussed mainly on refactoring existing code.</BODY></p>\n"
+      }
+    ]
+  },
+  {
+    "slot_display_name": "11:45 - 12:00 - Break",
+    "sessions": []
+  },
+  {
+    "slot_display_name": "12:00 - 13:00",
+    "sessions": [
+      {
+        "id": 60,
+        "title": "Defensive Programming 101 v2",
+        "speaker": "Niall Merrigan\n",
+        "start_time": "13/10/2012 12:00",
+        "room": "Room 1",
+        "description": "    <p><span>The web is a funny old place. You create a wonderful application, deploy it for the world to see and then everybody just wants to break it.<div><br></div><div>This session will show you some of the common security mistakes made by developers and how to avoid them. There will be some demos with code in C#. </div><div><br></div><div>Talk is rated level 100-200 with a target audience of web developers (not just ASP.NET. All the examples will be done in .NET. Even if you are not a web developer some of the parts of the talk will be handy) and assumes knowledge of web programming, basic security concepts, a working brain and sense of humour.</div><div><br></div><div><br></div><div></div></span><div><br></div></p>\n"
+      },
+      {
+        "id": 61,
+        "title": "BDD - Look ma! No frameworks",
+        "speaker": "Gemma Cameron\n",
+        "start_time": "13/10/2012 12:00",
+        "room": "Room 2",
+        "description": "            <p>An interactive session where I will explain BDD and how to use it to start building effective products that your customers, clients and users actually want. <br />\n<br />\nThis will be followed by practising how to use this to make your codebase self documenting and focussed. <br />\n<br />\nAll this and not a framework in sight!<br />\n</p>\n\n"
+      },
+      {
+        "id": 62,
+        "title": "Javascript sucks and it doesn't matter",
+        "speaker": "Rob Ashton",
+        "start_time": "13/10/2012 12:00",
+        "room": "Room 3",
+        "description": "<p>JS is a rubbish language.<div><br></div><div>No really - it is, you've all seen the 'WAT' video right? (If you haven't I'll show you some of the WTFs we're all talking about.</div><div><br></div><div>But why is any of this important? What makes for a good codebase? The language? The frameworks? The developers? What metrics are we going to use when it comes to working this out?</div><div><br></div><div>Let's look at at some C# (let's face it, probably our collective preferred language) and some idiomatic and equivalent JS - and see that actually, this world isn't so bad - so long as we focus on writing good code.</div><div><br></div><div>Warning: I am likely to have some opinions in this talk and be derisive about tooling and our reliance on it. </div></p>\n\n"
+      },
+      {
+        "id": 63,
+        "title": "Selenium a UI testing paradigm",
+        "speaker": "Nathan Gloyn",
+        "start_time": "13/10/2012 12:00",
+        "room": "Room 4",
+        "description": "<p>You may or may not have heard of Selenium the open source test framework for web applications.<div> <p>In the session we’ll cover:</p> <p>·         What Selenium is and where it’s come from</p> <p>·         How it works </p> <p>·         The various ways to use it </p> <p>·         How to build your tests for ease of understanding and reuse</p> <p>Whilst focusing on using Selenium the talk will also cover best practices around UI testing regardless of the tool you use to do the testing.</p></div></p>\n"
+      },
+      {
+        "id": 64,
+        "title": "Getting Started with Caliburn.Micro and Windows Phone 7",
+        "speaker": "Gary Park",
+        "start_time": "13/10/2012 12:00",
+        "room": "Room 5",
+        "description": "           <p><p style=\"color: rgb(34, 34, 34); font-family: Tahoma, Arial, Helvetica; font-size: 11px; text-align: left; \"><span style=\"font-size: small; \">Getting started with the Windows Phone 7 Development Platform is relatively simple, however, using a Framework like Caliburn.Micro takes away some of the more mundane tasks, and allows you to focus on what you are trying to achieve.  In this session we will start with a blank Windows Phone 7 project, and start to create our first Windows Phone 7 application using features such as:</span></p><ul style=\"color: rgb(34, 34, 34); font-family: Tahoma, Arial, Helvetica; font-size: 11px; text-align: left; \"><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">ActionMessages</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">Action Conventions</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">Binding Conventions</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">Navigation Service</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">The Bootstrapper</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">The IPhoneService</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">Tombstoning</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">Lauchers and Choosers</span></li><li style=\"list-style-type: square; \"><span style=\"font-size: small; \">The IWindowManager</span></li></ul></p>\n"
+      }
+    ]
+  },
+  {
+    "slot_display_name": "13:00 - 14:30 - Lunch and Grok Talks",
+    "sessions": []
+  },
+  {
+    "slot_display_name": "14:30 - 15:30",
+    "sessions": [
+      {
+        "id": 65,
+        "title": "WebSockets and SignalR - Building the Real Time Interactive web",
+        "speaker": "Chris Alcock",
+        "start_time": "13/10/2012 14:30",
+        "room": "Room 1",
+        "description": "            <p>In this session we will explore the key concepts of new 'HTML5' WebSockets standard, looking at its implementation on both the client and server, before moving on to look at the use of SignalR for connectivity and RPC between server and client, looking at both browser and alternative client implementation.  To conclude the session will explore where these two technologies meet, looking at the use of WebSockets by SignalR.</p>\n"
+      },
+      {
+        "id": 66,
+        "title": "Unit testing with Visual Studio 2012 RC",
+        "speaker": "Richard Fennell",
+        "start_time": "13/10/2012 14:30",
+        "room": "Room 2",
+        "description": "<p>\n<BODY>In the Visual Studio 2012 RC there are major changes to the way unit testing frameworks are implemented, you are no longer limited to MSTest it is now a pluggable model. In this session I will show what is now available ‘out the box’ and what other options are open to allow you to leverage the testing tools you want to use. <BR></BODY></p>"
+      },
+      {
+        "id": 67,
+        "title": "TBC",
+        "speaker": "TBC",
+        "start_time": "13/10/2012 14:30",
+        "room": "Room 3",
+        "description": "TBC"
+      },
+      {
+        "id": 69,
+        "title": "Gadgeteer for .NET",
+        "speaker": "Robert Hogg",
+        "start_time": "13/10/2012 14:30",
+        "room": "Room 4",
+        "description": "<p>\n<BODY><P>Gadgeteer is a rapid prototyping platform for small embedded hardware devices, that has the advantages of .NET programming and simple assembly of electronics from a kit.</P>\n<P>Using the software tools you know - C# and Visual Studio - you can use Gadgeteer to easily construct both simple and sophisticated devices. </P>\n<P>This session will explore what is possible with Gadgeteer.</P></BODY></p>"
+      },
+      {
+        "id": 68,
+        "title": "Working Effectively with Umbraco",
+        "speaker": "Andy Gibson",
+        "start_time": "13/10/2012 14:30",
+        "room": "Room 5",
+        "description": "            <p><div>Umbraco is a Content Management System that has been making waves in the .NET development community lately (for various reasons). Because of it's flexibility, extensibility and relative ease of use for the end-user, It is widely used and very popular with digital agencies using the .NET stack. However being an established CMS there are many tools, patterns and practices you can apply to Umbraco development that can significatntly improve your productivity (and make life a little easier for your designers too!).</div><div><br></div><div>This session will cover areas such as:</div><div><br></div><div>- Project and folder stucture</div><div>- Automation with Rake</div><div>- Writing clean code without codebehind (or clogging up your Razor views)</div><div>- Optimising use of the Umbraco Node API.</div><div>- Hints and tips for faster, more effecient umbraco development</div><div><br></div><div>If you're interested in working more effectively with Umbraco, this is the session for you!</div></p>\n"
+      }
+    ]
+  },
+  {
+    "slot_display_name": "15:30 - 15:45 - Break",
+    "sessions": []
+  },
+  {
+    "slot_display_name": "15:45 - 16:45",
+    "sessions": [
+      {
+        "id": 70,
+        "title": "The business of side projects",
+        "speaker": "Richard Garside",
+        "start_time": "13/10/2012 15:45",
+        "room": "Room 1",
+        "description": "            <p>Like many developers I have started and abandonned my fair share of side projects. There are so many great ideas but it never seems like there is the time to finish them. I decided that if I wanted to spend more time on my side projects, they were going to have to start paying for themselves.<br />\n<br />\nIn this talk I will discuss how I've started to do that and how the new app store markets are hopefully making it possible for more people to make a living (or a percentage of one) from their own software.<br />\n<br />\nI'll talk about creating the app Font Picker and getting it into the Mac App and soon the Windows 8 store. I'll let you know how well it's gone so far, and try to extrapolate how feasable it is to make a living completely out of my own sofware in the future.<br />\n<br />\n<br />\n</p>"
+      },
+      {
+        "id": 71,
+        "title": "Event Driven Architectures",
+        "speaker": "Richard Fennell",
+        "start_time": "13/10/2012 15:45",
+        "room": "Room 2",
+        "description": "            <p>So you have decided to break up that monolithic application into services, after all it worked for Amazon, right? Perhaps you want to embrace the DevOps model, perhaps you want to scale your development. But just how do all those services talk to each other, and how do you build a UI on top of them? In this session we will look at the event driven architecture approach and give you an understanding of how we use messaging to communicate, just what we are communicating about, and how to build a composite UI.</p>\n"
+      },
+      {
+        "id": 72,
+        "title": "TBC",
+        "speaker": "TBC",
+        "start_time": "13/10/2012 15:45",
+        "room": "Room 3",
+        "description": "TBC"
+      },
+      {
+        "id": 73,
+        "title": "C# + PowerShell = happy couple",
+        "speaker": "Jimmy Skowronski",
+        "start_time": "13/10/2012 15:45",
+        "room": "Room 4",
+        "description": "            <p><div>Windows PowerShell is a great tool for system administrators and normal users alike. One of its design principles was extensibility. It provides powerful scripting mechanism but is also very easy for developers to create new tools and utilities to be integrated with PowerShell. It provides easy to use SDK that eliminates many tasks that typical command line tool would require.</div><div><br></div><div>The session introduces into PowerShell development from the ground up. You will learn how to start and the basics of argument processing, output and pipeline processing. We will also look at error handling and diagnostics to end up deeper in custom types and type conversion. After the session you will be able to sit down and write a tool your system administrator will love you for.</div></p>\n"
+      },
+      {
+        "id": 74,
+        "title": "Using your NuGet for Fun & Profit (Redux)",
+        "speaker": "Joel Hammond-Turner",
+        "start_time": "13/10/2012 15:45",
+        "room": "Room 5",
+        "description": "            <p>The explosive take-up of NuGet clearly demonstrates just how valuable a packaging system for .Net can be.<div><br /></div><div>This session is a refined and improved repeat of that run at DDDSW - it will look the issues surrounding  creating NuGet packages for use within your own organisation rather than for general consumption, and will look at the options for hosting a NuGet server both on-site and in the cloud.</div><div><br /></div><div>It will also demonstrate the NuGet.PackageNPublish tooling released by Landmark at DDDSW4 which makes creating packages to contain your libraries as easy as File->New Project.</div></p>\n"
+      }
+    ]
+  },
+  {
+    "slot_display_name": "16:45 - 17:00 - Close and Prizes",
+    "sessions": []
+  }
+]
