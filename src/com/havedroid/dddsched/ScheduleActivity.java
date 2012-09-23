@@ -2,6 +2,7 @@ package com.havedroid.dddsched;
 
 import android.app.TabActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.havedroid.dddsched.Util.DDDNorthTwitter;
 import com.havedroid.dddsched.Util.UpdateSchedule;
 import com.havedroid.dddsched.data.Schedule;
+import com.havedroid.dddsched.data.Session;
 import com.havedroid.dddsched.data.SessionSlot;
 import com.markupartist.android.widget.PullToRefreshListView;
 
@@ -138,6 +140,7 @@ public class ScheduleActivity extends TabActivity {
             mAllAdapter = new SectionedListAdapter(this);
             for (SessionSlot slot : getSessionSlots()) {
                 ScheduleListViewAdapter sessionAdapter = new ScheduleListViewAdapter(getApplicationContext(), slot.getSessions());
+                sessionAdapter.setOnDetailRequestedHandler(moveToDetailActivity);
                 mAllAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
             }
         }
@@ -149,11 +152,22 @@ public class ScheduleActivity extends TabActivity {
             mMySessionsAdapter = new SectionedListAdapter(this);
             for (SessionSlot slot : getSessionSlots()) {
                 AttendingSessionsListViewAdapter sessionAdapter = new AttendingSessionsListViewAdapter(getApplicationContext(), slot.getSessions());
+                sessionAdapter.setOnDetailRequestedHandler(moveToDetailActivity);
                 mMySessionsAdapter.addSection(slot.getSessionSlotDisplayName(), sessionAdapter);
             }
         }
         return mMySessionsAdapter;
     }
+
+    private ScheduleListViewAdapter.SessionDetailRequested moveToDetailActivity = new ScheduleListViewAdapter.SessionDetailRequested() {
+        @Override
+        public void onRequest(Session session) {
+            Intent showDetailIntent = new Intent(getApplicationContext(), SessionViewActivity.class);
+            showDetailIntent.putExtra(SessionViewActivity.SESSION_EXTRA_KEY, session);
+            startActivity(showDetailIntent);
+        }
+    };
+
 
     private Iterable<SessionSlot> getSessionSlots() {
         return Schedule.getSchedule(getApplicationContext(), true);

@@ -1,21 +1,20 @@
 package com.havedroid.dddsched;
 
-import com.havedroid.dddsched.data.Session;
-
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import com.havedroid.dddsched.data.Session;
 
 public class ScheduleListViewAdapter extends BaseAdapter {
 	
 	protected Context mContext;
 	protected Session[] mSessions;
-	
+    private SessionDetailRequested sessionDetailRequestedHandler;
+
 	public ScheduleListViewAdapter(Context context, Session[] sessions) {
 		mContext = context;
 		mSessions = sessions;
@@ -34,6 +33,10 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 		int id = mSessions[index].getId();
 		return (long)id;
 	}
+
+    public void setOnDetailRequestedHandler(SessionDetailRequested handler){
+        sessionDetailRequestedHandler = handler;
+    }
 
 	public View getView(int index, View view, ViewGroup viewGroup) {
 		ViewHolder viewHolder;
@@ -88,12 +91,16 @@ public class ScheduleListViewAdapter extends BaseAdapter {
 			notifyDataSetChanged();
 		}
 	};
-	
-	private View.OnClickListener descClick = new View.OnClickListener() {
-		public void onClick(View v){
-			Intent showDetailIntent = new Intent(mContext, SessionViewActivity.class);
-			showDetailIntent.putExtra(SessionViewActivity.SESSION_EXTRA_KEY, (Session)v.getTag());
-			mContext.startActivity(showDetailIntent);
+
+    private View.OnClickListener descClick = new View.OnClickListener() {
+        public void onClick(View v){
+            if(sessionDetailRequestedHandler != null){
+                sessionDetailRequestedHandler.onRequest((Session)v.getTag());
+            }
 		}
 	};
+
+    public interface SessionDetailRequested{
+        void onRequest(Session session);
+    }
 }
