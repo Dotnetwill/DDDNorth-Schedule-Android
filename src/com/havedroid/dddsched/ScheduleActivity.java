@@ -81,7 +81,7 @@ public class ScheduleActivity extends TabActivity {
             tweetListView.onRefreshComplete(cal.toLocaleString());
 
             tweetListView.scrollTo(0,0);
-            Toast.makeText(getApplicationContext(), "New Tweets!", Toast.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(), "New Tweets!", Toast.LENGTH_LONG).show();
         }
     };
 
@@ -202,7 +202,7 @@ public class ScheduleActivity extends TabActivity {
             if (success) {
                 setupListAdapters(true);
                 Log.v(Constants.LOG_TAG, "Reloaded list adapters");
-                Toast.makeText(getApplicationContext(), "Schedule Updated!", Toast.LENGTH_LONG);
+                Toast.makeText(getApplicationContext(), "Schedule Updated!", Toast.LENGTH_LONG).show();
             }
         }
     };

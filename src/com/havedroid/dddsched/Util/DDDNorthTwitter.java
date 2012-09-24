@@ -132,6 +132,7 @@ public class DDDNorthTwitter {
                                                  .edit();
 
         editor.putLong(TWITTER_LAST_TWEET_ID, lastTweetId);
+        editor.commit();
     }
 
     private long getLastTweetId() {
