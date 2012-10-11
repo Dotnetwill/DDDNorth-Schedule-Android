@@ -92,7 +92,7 @@ public class DDDTweetListAdapter extends BaseAdapter {
     private TwitterUpdateComplete updateComplete = new TwitterUpdateComplete() {
         @Override
         public void onCompleted(List<DDDTweet> newTweets) {
-            if (tweets != null) {
+            if (newTweets != null && newTweets.size() > 0 && newTweets.size() > tweets.size()) {
                 tweets = newTweets;
                 notifyDataSetChanged();
             }
